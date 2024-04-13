@@ -1,0 +1,18 @@
+
+<app-header></app-header>
+
+<div class ="OverviewContainer">
+  <div class ="header ">Number of Array:{{articleArray.length}} </div>
+
+<app-article *ngFor="let article of articleArray"
+             [articletest]="article"
+></app-article>
+
+  <a routerLink="formular">
+    <button>
+      Formular
+    </button>
+  </a>
+</div>
+
+<app-article-formular (onArticleAdd)='addnewArticle($event)'></app-article-formular>

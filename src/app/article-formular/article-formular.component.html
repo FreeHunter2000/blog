@@ -1,0 +1,19 @@
+<p>Hier kommt ein Formular hin!</p>
+
+
+
+<label> </label>
+<input placeholder="Name" id ="name"  [(ngModel)]="article.titleString">
+
+<input placeholder="Inhalt" id ="content" [(ngModel)] ="article.inhaltString">
+
+
+<button (click)=onButtonclick()>
+  Add new Article
+</button>
+
+<a routerLink="">
+  <button>
+    Home
+  </button>
+</a>
