@@ -8,6 +8,8 @@ import { ArticleComponent } from './article/article.component';
 import { OverviewComponent } from './overview/overview.component';
 import { ArticleFormularComponent } from './article-formular/article-formular.component';
 import {FormsModule} from "@angular/forms";
+import { ArtikelSeiteComponent } from './artikel-seite/artikel-seite.component';
+import { ProduktComponent } from './produkt/produkt.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import {FormsModule} from "@angular/forms";
     HeaderComponent,
     ArticleComponent,
     OverviewComponent,
-    ArticleFormularComponent
+    ArticleFormularComponent,
+    ArtikelSeiteComponent,
+    ProduktComponent
   ],
   imports: [
     BrowserModule,
