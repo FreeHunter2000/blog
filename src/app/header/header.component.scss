@@ -1,0 +1,46 @@
+/* Allgemeine Stile für die Navigationsleiste */
+.navbar {
+  background-color: #080f39; /* Hintergrundfarbe */
+  font-family: Arial, sans-serif; /* Schriftart */
+}
+
+/* Stile für den Markennamen */
+.navbar .navbar-brand {
+  color: #f4ac3d; /* Textfarbe */
+  font-size: 1.5em; /* Schriftgröße */
+  font-weight: bold; /* Schriftstärke */
+}
+
+/* Stile für den Umschalter der Navigationsleiste */
+.navbar .navbar-toggler {
+  border-color: #f4ac3d; /* Rahmenfarbe */
+}
+
+/* Stile für die Navigationslinks */
+.navbar .nav-link {
+  color: #f4ac3d; /* Textfarbe */
+  transition: color 0.3s ease; /* Übergang */
+}
+
+/* Stile für den aktiven Navigationslink */
+.navbar .nav-link.active {
+  color: #f4ac3d; /* Textfarbe */
+  background-color: #000000; /* Hintergrundfarbe */
+}
+
+/* Stile für den deaktivierten Navigationslink */
+.navbar .nav-link.disabled {
+  color: #565d61; /* Textfarbe */
+}
+
+/* Stile für das Suchformular */
+.navbar .form-control {
+  margin-right: 10px; /* Rechter Rand */
+}
+
+.navbar .btn-outline-success {
+  color: #28a745; /* Textfarbe */
+  border-color: #28a745; /* Rahmenfarbe */
+  transition: background-color 0.3s ease; /* Übergang */
+}
+
