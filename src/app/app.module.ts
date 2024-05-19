@@ -8,13 +8,11 @@ import { ArticleComponent } from './article/article.component';
 import { OverviewComponent } from './overview/overview.component';
 import { ArticleFormularComponent } from './article-formular/article-formular.component';
 import {FormsModule} from "@angular/forms";
+
+import { ArtikelSeiteComponent } from './artikel-seite/artikel-seite.component';
+import { ProduktComponent } from './produkt/produkt.component';
 import {ToastrModule} from "ngx-toastr";
-
 import {MatButtonModule} from "@angular/material/button";
-
-
-
-
 
 
 @NgModule({
@@ -23,6 +21,8 @@ import {MatButtonModule} from "@angular/material/button";
     ArticleComponent,
     OverviewComponent,
     ArticleFormularComponent,
+    ArtikelSeiteComponent,
+    ProduktComponent,
     HeaderComponent,
 
   ],

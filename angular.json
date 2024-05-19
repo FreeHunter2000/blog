@@ -40,8 +40,6 @@
               "src/styles.scss",
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "node_modules/ngx-toastr/toastr.css"
-
-
             ],
             "scripts": []
           },
