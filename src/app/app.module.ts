@@ -13,6 +13,9 @@ import { ArtikelSeiteComponent } from './artikel-seite/artikel-seite.component';
 import { ProduktComponent } from './produkt/produkt.component';
 import {ToastrModule} from "ngx-toastr";
 import {MatButtonModule} from "@angular/material/button";
+import {UserService} from "./user/user.service";
+import {AuthService} from "./user/auth.service";
+import {login} from "./user/login.component";
 
 
 @NgModule({
@@ -24,6 +27,7 @@ import {MatButtonModule} from "@angular/material/button";
     ArtikelSeiteComponent,
     ProduktComponent,
     HeaderComponent,
+    login
 
   ],
   imports: [
@@ -34,7 +38,7 @@ import {MatButtonModule} from "@angular/material/button";
     MatButtonModule
 
   ],
-  providers: [],
+  providers: [UserService,AuthService],
   bootstrap: [AppComponent]
 
 
