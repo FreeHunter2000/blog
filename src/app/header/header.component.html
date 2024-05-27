@@ -1,1 +1,18 @@
+<!-- app.component.html -->
+<nav class="navbar">
+  <a routerLink="/" routerLinkActive="active" class="navbar__item">Link 3</a>
+  <a routerLink="/article" routerLinkActive="active" class="navbar__item">Link 1</a>
+  <a routerLink="/overview" routerLinkActive="active" class="navbar__item">Link 2</a>
+</nav>
 
+<router-outlet></router-outlet>
+
+<div *ngIf="showSubpage1" class="subpage">
+  <h2>Unterseite 1</h2>
+  <p>Hier ist der Inhalt von Unterseite 1.</p>
+</div>
+
+<div *ngIf="showSubpage2" class="subpage">
+  <h2>Unterseite 2</h2>
+  <p>Hier ist der Inhalt von Unterseite 2.</p>
+</div>

@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  title = 'Meine Angular App';
+  showSubpage1: boolean = false;
+  showSubpage2: boolean = false;
 
+  toggleSubpage1() {
+    this.showSubpage1 = !this.showSubpage1;
+  }
+
+  toggleSubpage2() {
+    this.showSubpage2 = !this.showSubpage2;
+  }
 }
