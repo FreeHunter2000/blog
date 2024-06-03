@@ -1,4 +1,4 @@
 <div class ="ProduktSite">
-<app-produkt [produkt]="einProdukt">
+<app-produkt *ngFor="let produkt of Produktlist" [produkt]="produkt">
 </app-produkt>
 </div>

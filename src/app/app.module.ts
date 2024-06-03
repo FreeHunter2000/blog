@@ -16,6 +16,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {UserService} from "./user/user.service";
 import {AuthService} from "./user/auth.service";
 import {login} from "./user/login.component";
+import { ProduktStandaloneComponent } from './produkt-standalone/produkt-standalone.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import {login} from "./user/login.component";
     ArtikelSeiteComponent,
     ProduktComponent,
     HeaderComponent,
-    login
+    login,
+    ProduktStandaloneComponent
 
   ],
   imports: [

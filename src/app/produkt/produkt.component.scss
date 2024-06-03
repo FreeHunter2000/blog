@@ -9,6 +9,7 @@
   flex-direction: column;
 }
 
+
 .image{
 margin: 20px;
 }
@@ -24,4 +25,10 @@ margin: 20px;
   justify-content: center;
 
 
+}
+.Button{
+  display: flex;
+  flex-direction:row;
+
+  gap: 10px;
 }

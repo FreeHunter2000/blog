@@ -10,7 +10,7 @@ export class Produkt{
     this.name = name ;
     this.description = description;
     this.amount = amount;
-    this.imagePath = imagePath
+    this.imagePath = imagePath;
 
   }
 }
