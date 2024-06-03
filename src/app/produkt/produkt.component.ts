@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {Produkt} from "./produkt.model";
+
 
 @Component({
   selector: 'app-produkt',
@@ -6,15 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './produkt.component.scss'
 })
 export class ProduktComponent {
-  public ProduktNr:number;
-  public Name:string;
-  public Anzahlproukte:number;
-
- constructor() {
-   this.ProduktNr = 0;
-   this.Name= "CreatedProdukt";
-     this.Anzahlproukte= 22;
- }
+ @Input() produkt!: Produkt;
+  Testprodukt : Produkt = new Produkt(5,"AnyName","TEst Description",68,"https://cdn.stocksnap.io/img-thumbs/960w/food-recipe_G8QICMKLUV.jpg")
 
 
 

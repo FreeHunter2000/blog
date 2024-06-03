@@ -1,6 +1,8 @@
-import { Component , NgModule} from '@angular/core';
-import {ProduktComponent} from "../produkt/produkt.component";
+import {Component, Input, NgModule} from '@angular/core';
+import {Produkt} from "../produkt/produkt.model";
 import{ProduktInjectableService} from "../produkt-injectable.service";
+
+
 
 
 @Component({
@@ -9,10 +11,10 @@ import{ProduktInjectableService} from "../produkt-injectable.service";
   styleUrl: './artikel-seite.component.scss'
 })
 export class ArtikelSeiteComponent {
-
+  @Input() einProdukt!:Produkt;
   constructor(private produktservice :ProduktInjectableService) {
   }
-  Produktlist:ProduktComponent[]= this.produktservice.getProdukt();
+  Produktlist:Produkt[]= this.produktservice.getProdukt();
 
 
 

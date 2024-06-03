@@ -3,6 +3,8 @@ import {article, ArticleComponent} from "../article/article.component";
 import {ArticleFormularComponent} from "../article-formular/article-formular.component";
 import { Router } from '@angular/router';
 import {RouterModule} from "@angular/router";
+import {Produkt} from "../produkt/produkt.model";
+import{ProduktInjectableService} from "../produkt-injectable.service";
 
 @Component({
   selector: 'app-overview',
@@ -15,9 +17,9 @@ import {RouterModule} from "@angular/router";
 export class OverviewComponent {
 
 
-  constructor(public router: Router) {
-
+  constructor(private produktservice :ProduktInjectableService) {
   }
+  Produktlist:Produkt[]= this.produktservice.getProdukt();
 
 
   articleArray : article[] =[
@@ -25,6 +27,8 @@ export class OverviewComponent {
     {inhaltString:"Kurzer Teststring Ingalt" , titleString:"KurzerName"},
     {inhaltString:"DiKomicsher text name zum komischen testen" , titleString:"KomischerName"}
   ] ;
+
+
 
 
   addnewArticle(article : article){

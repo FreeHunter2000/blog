@@ -1,0 +1,27 @@
+
+.Produkt{
+  position: relative;
+  padding: 10px;
+  border: 2px solid white;
+  margin: 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.image{
+margin: 20px;
+}
+
+.Text{
+  display: flex;
+  justify-content: center;
+}
+
+.descriptionAndImage{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+
+
+}
