@@ -1,35 +1,28 @@
-// app.component.scss
 .navbar {
-  display: flex;
-  justify-content: space-around;
-  padding: 1em;
   background-color: #333;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.navbar__item {
   color: #fff;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 18px;
+}
 
-  .navbar__item {
-    color: #fff;
-    text-decoration: none;
-    background-color: #666;
-    border: none;
-    padding: 0.5em;
-    cursor: pointer;
-
-    &:hover {
-      color: #ddd;
-      background-color: #555;
-    }
-
-  }
-  .active {
-
-    background-color: #ffffff;
-  }
+.navbar__item:hover {
+  text-decoration: underline;
 }
 
 .subpage {
-  margin-top: 1em;
-  padding: 1em;
-  border: 1px solid #ccc;
+  margin-top: 20px;
 }
 
+h2 {
+  color: #333;
+}
 
+p {
+  color: #666;
+}

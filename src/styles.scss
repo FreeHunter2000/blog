@@ -1,6 +1,47 @@
+html, body, div, span, app-root {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
+/* Light Mode */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+/* Dark Mode */
+    @media (prefers-color-scheme: dark) {
 
+      body {
+        background-color: #333;
+        color: #f4f4f4;
+      }
 
-/* You can add global styles to this file, and also import other style files */
+      .container {
+        background-color: #444;
+        border-color: #555;
+      }
 
+      .navbar {
+        background-color: #222;
+        color: #f4f4f4;
+      }
 
+      .navbar a {
+        color: #f4f4f4;
+      }
+
+      .navbar a:hover {
+        color: #ddd;
+      }
+
+      .content {
+        background-color: #444;
+        border-color: #555;
+      }
+
+  }
