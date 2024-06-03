@@ -28,7 +28,7 @@ export class UserService {
     this.users = this.users.filter(user => user.email !== email);
   }
 
-  getUser(email: string) {
+  getUser(email: string | undefined) {
     return this.users.find(user => user.email === email);
   }
   getUserMail() {
