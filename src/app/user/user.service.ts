@@ -16,7 +16,8 @@ export class UserService {
     eigeneBwertungen: [],
     eigeneKaeufe: [],
     userType: 'Kunde',
-    password: 'password1'
+    password: 'password1',
+    loggedIn: true
   }) }
 
   addUser(user: User) {
@@ -30,9 +31,30 @@ export class UserService {
   getUser(email: string) {
     return this.users.find(user => user.email === email);
   }
+  getUserMail() {
+    return this.currentUser;
+  }
 
   getAllUser() {
     return this.users ;
   }
+  setUserLoggedIn(email: string) {
+    const user = this.getUser(email);
+    if (user) {
+      user.loggedIn = true;
+      console.log(`Der Benutzer ${email} ist jetzt eingeloggt.`);
+    } else {
+      console.log(`Benutzer ${email} nicht gefunden.`);
+    }
+  }
 
+  setUserLoggedOut(email: string | undefined) {
+    const user = this.getUser(email);
+    if (user) {
+      user.loggedIn = false;
+      console.log(`Der Benutzer ${email} ist jetzt abgemeldet.`);
+    } else {
+      console.log(`Benutzer ${email} nicht gefunden.`);
+    }
+  }
 }

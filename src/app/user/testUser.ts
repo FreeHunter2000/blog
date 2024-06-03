@@ -13,6 +13,7 @@ export class User {
   eigeneKaeufe: any[];
   userType: 'Administrator' | 'Kunde';
   password: string;
+  loggedIn: boolean | undefined ;
 
   constructor() {
     this.email= 'benutzer1@example.com';
@@ -22,6 +23,7 @@ export class User {
     this.eigeneKaeufe= [];
     this.userType= 'Kunde';
     this.password= 'password1';
+    this.loggedIn= false ;
   }
 }
 
@@ -36,7 +38,8 @@ const user1: User = {
   eigeneBwertungen: [],
   eigeneKaeufe: [],
   userType: 'Kunde',
-  password: 'password1'
+  password: 'password1',
+  loggedIn: false
 };
 
 const user2: User = {
@@ -46,7 +49,8 @@ const user2: User = {
   eigeneBwertungen: [],
   eigeneKaeufe: [],
   userType: 'Administrator',
-  password: 'password2'
+  password: 'password2',
+  loggedIn: false
 };
 
 

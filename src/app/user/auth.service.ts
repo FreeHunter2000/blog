@@ -33,7 +33,10 @@ export class AuthService {
   login(email: string, password: string) {
     const user = this.userService.getUser(email);
     if (user && user.password === password) {
+
       console.log('Erfolgreich eingeloggt!');
+      this.userService.currentUser = user;
+      this.userService.setUserLoggedIn(email)
       return true;
     } else {
       console.log('Fehler beim Einloggen. Bitte überprüfen Sie Ihre E-Mail und Ihr Passwort.');
@@ -42,7 +45,10 @@ export class AuthService {
   }
 
   logout() {
+
     console.log('Erfolgreich ausgeloggt!');
+    this.userService.setUserLoggedOut(this.userService.currentUser?.email)
+    return true;
   }
 
 
