@@ -1,5 +1,56 @@
-.flexboxTEst{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
+
+.OverviewContainer {
+  padding: 20px;
+  background-color: #000000;
+}
+
+.header {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #22eded;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .OverviewContainer {
+    padding: 10px;
+  }
+
+  .header {
+    font-size: 1.2em;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+}
+
+/* Styles for the article list */
+app-article {
+  margin-bottom: 15px;
+}
+
+/* Styles for the article form */
+app-article-formular {
+  margin-top: 20px;
 }
