@@ -34,4 +34,5 @@ export class UserService {
   getAllUser() {
     return this.users ;
   }
+
 }
