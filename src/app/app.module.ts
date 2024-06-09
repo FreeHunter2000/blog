@@ -17,6 +17,8 @@ import {UserService} from "./user/user.service";
 import {AuthService} from "./user/auth.service";
 import {LoginComponent} from "./user/login.component";
 import { ProduktStandaloneComponent } from './produkt-standalone/produkt-standalone.component';
+import {AdminComponent} from "./user/admin/admin.component";
+
 
 
 @NgModule({
@@ -29,7 +31,10 @@ import { ProduktStandaloneComponent } from './produkt-standalone/produkt-standal
     ProduktComponent,
     HeaderComponent,
     LoginComponent,
-    ProduktStandaloneComponent
+    ProduktStandaloneComponent,
+    AdminComponent,
+
+
 
   ],
   imports: [

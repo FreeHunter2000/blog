@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {OverviewComponent} from "./overview/overview.component";
-import {ArticleFormularComponent} from "./article-formular/article-formular.component";
 import {ArtikelSeiteComponent} from "./artikel-seite/artikel-seite.component";
+import {AdminComponent} from "./user/admin/admin.component";
+import {AdminGuard} from "./user/admin/admin.guard";
 
-import {User} from "./user/testUser";
+import {LoginComponent} from "./user/login.component";
 
 const routes: Routes = [
   //*{path:'', component:OverviewComponent},
@@ -12,8 +13,8 @@ const routes: Routes = [
   //*{path:'formular', component:ArticleFormularComponent}
   { path: 'article', component: ArtikelSeiteComponent },
   { path: 'overview', component: OverviewComponent },
-  { path: 'loginPage', component: User },
-
+  { path: 'login', component: LoginComponent },
+  { path: 'admin', component: AdminComponent, canActivate: [AdminGuard] },
 ];
 
 @NgModule({

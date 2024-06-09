@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import{ User } from "./testUser";
+import {Injectable} from '@angular/core';
+import {User, UserType} from './testUser';
 
 
 @Injectable({
@@ -15,7 +15,7 @@ export class UserService {
     vorname: 'Eins',
     eigeneBwertungen: [],
     eigeneKaeufe: [],
-    userType: 'Kunde',
+    userType: UserType.Admin,
     password: 'password1',
     loggedIn: true
   }) }

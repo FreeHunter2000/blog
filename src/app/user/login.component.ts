@@ -1,7 +1,8 @@
 import { Component } from "@angular/core";
 import { UserService } from "./user.service";
 import { AuthService } from "./auth.service"; // Sie müssen AuthService importieren
-import { User } from "./testUser";
+import {User} from "./testUser";
+
 
 @Component({
   selector: 'login',

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { UserService } from './user.service';
 import {User} from "./testUser";
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -32,6 +33,7 @@ export class AuthService {
       this.logAndDisplay('Erfolgreich eingeloggt!');
       this.userService.currentUser = user;
       this.userService.setUserLoggedIn(email)
+      this.userService.currentUser = user;
       return true;
     } else {
       this.logAndDisplay('Fehler beim Einloggen. Bitte überprüfen Sie Ihre E-Mail und Ihr Passwort.');
