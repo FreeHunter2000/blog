@@ -15,7 +15,7 @@ import {ToastrModule} from "ngx-toastr";
 import {MatButtonModule} from "@angular/material/button";
 import {UserService} from "./user/user.service";
 import {AuthService} from "./user/auth.service";
-import {login} from "./user/login.component";
+import {LoginComponent} from "./user/login.component";
 import { ProduktStandaloneComponent } from './produkt-standalone/produkt-standalone.component';
 
 
@@ -28,7 +28,7 @@ import { ProduktStandaloneComponent } from './produkt-standalone/produkt-standal
     ArtikelSeiteComponent,
     ProduktComponent,
     HeaderComponent,
-    login,
+    LoginComponent,
     ProduktStandaloneComponent
 
   ],

@@ -6,40 +6,35 @@ import {User} from "./testUser";
   providedIn: 'root'
 })
 
-
-
-
 export class AuthService {
   loggedInUser: User | null | undefined = null;
 
-
-
-
-
   constructor(private userService: UserService) { }
-
-
-
-
 
   register(user: User) {
     this.userService.addUser(user);
   }
 
 
+  logAndDisplay(message: string | null) {
+    console.log(message);
 
-
+    // Zeigen Sie die Nachricht in einem Popup an
+    if (message) {
+      alert(message);
+    }
+  }
 
   login(email: string, password: string) {
     const user = this.userService.getUser(email);
     if (user && user.password === password) {
 
-      console.log('Erfolgreich eingeloggt!');
+      this.logAndDisplay('Erfolgreich eingeloggt!');
       this.userService.currentUser = user;
       this.userService.setUserLoggedIn(email)
       return true;
     } else {
-      console.log('Fehler beim Einloggen. Bitte überprüfen Sie Ihre E-Mail und Ihr Passwort.');
+      this.logAndDisplay('Fehler beim Einloggen. Bitte überprüfen Sie Ihre E-Mail und Ihr Passwort.');
       return false;
     }
   }
@@ -50,6 +45,4 @@ export class AuthService {
     this.userService.setUserLoggedOut(this.userService.currentUser?.email)
     return true;
   }
-
-
 }

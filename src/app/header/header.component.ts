@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {UserService} from "../user/user.service";
 
 @Component({
   selector: 'app-header',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+
+  constructor(public userService: UserService) { }
+
   title = 'Meine Angular App';
   showSubpage1: boolean = false;
   showSubpage2: boolean = false;

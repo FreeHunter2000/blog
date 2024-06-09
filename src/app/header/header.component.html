@@ -3,6 +3,9 @@
   <a routerLink="/" routerLinkActive="active" class="navbar__item">Link 3</a>
   <a routerLink="/article" routerLinkActive="active" class="navbar__item">Link 1</a>
   <a routerLink="/login" routerLinkActive="active" class="navbar__item">Link 2</a>
+  <div *ngIf="userService.currentUser">
+    Hallo {{userService.currentUser?.name}}, du bist eingeloggt!
+  </div>
 </nav>
 
 <router-outlet></router-outlet>
