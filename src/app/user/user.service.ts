@@ -57,4 +57,6 @@ export class UserService {
       console.log(`Benutzer ${email} nicht gefunden.`);
     }
   }
+  setCurrentUser(email: string | undefined) {}
+
 }
