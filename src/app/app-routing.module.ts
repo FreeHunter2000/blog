@@ -4,10 +4,10 @@ import {OverviewComponent} from "./overview/overview.component";
 import {ArtikelSeiteComponent} from "./artikel-seite/artikel-seite.component";
 import {AdminComponent} from "./user/admin/admin.component";
 import {AdminGuard} from "./user/admin/admin.guard";
-
 import {LoginComponent} from "./user/login.component";
 import {StandaloneComponentScopeReader} from "@angular/compiler-cli/src/ngtsc/scope/src/standalone";
 import {ProduktStandaloneComponent} from "./produkt-standalone/produkt-standalone.component";
+import{RegisterComponent} from "./user/register/register.component";
 
 const routes: Routes = [
   //*{path:'', component:OverviewComponent},
@@ -16,6 +16,8 @@ const routes: Routes = [
   { path: 'article', component: ArtikelSeiteComponent },
   { path: 'overview', component: OverviewComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+
   { path: 'admin', component: AdminComponent, canActivate: [AdminGuard] },
   { path: 'standalone/:id', component: ProduktStandaloneComponent}
 ];
