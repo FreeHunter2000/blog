@@ -16,7 +16,7 @@ export class AdminGuard implements CanActivate {
     if (currentUser && currentUser.userType === 'Admin') {
       return true;
     } else {
-      // Leiten Sie nicht-Admin-Benutzer auf eine andere Seite um
+      // Leite nicht-Admin-Benutzer auf eine andere Seite um
       this.router.navigate(['/']);
       return false;
     }

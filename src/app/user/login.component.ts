@@ -12,6 +12,7 @@ import {User} from "./testUser";
 export class LoginComponent { // Es ist üblich, Komponentenklassen mit Großbuchstaben zu beginnen
 
   @Output() UserChange: EventEmitter<User> = new EventEmitter();
+
   email: string= ''; // Sie müssen email und password definieren
   password: string= '';
 

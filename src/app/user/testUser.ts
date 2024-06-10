@@ -20,11 +20,11 @@ export class User {
     this.email = email;
     this.name = name;
     this.vorname = vorname;
-    this.eigeneBwertungen = eigeneBwertungen;
-    this.eigeneKaeufe = eigeneKaeufe;
-    this.userType = userType;
+    this.eigeneBwertungen = [];
+    this.eigeneKaeufe = [];
+    this.userType = UserType.Kunde;
     this.password = password;
-    this.loggedIn = loggedIn;
+    this.loggedIn = true;
   }
 }
 

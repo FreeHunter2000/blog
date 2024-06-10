@@ -19,6 +19,7 @@ import {LoginComponent} from "./user/login.component";
 import { ProduktStandaloneComponent } from './produkt-standalone/produkt-standalone.component';
 import {AdminComponent} from "./user/admin/admin.component";
 import { WarenkorbComponent } from './warenkorb/warenkorb.component';
+import {RegisterComponent} from "./user/register/register.component";
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { WarenkorbComponent } from './warenkorb/warenkorb.component';
     ProduktStandaloneComponent,
     AdminComponent,
     WarenkorbComponent,
+    RegisterComponent
 
 
 
