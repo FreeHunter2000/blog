@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import {RouterModule} from "@angular/router";
 import {Produkt} from "../produkt/produkt.model";
 import{ProduktInjectableService} from "../produkt-injectable.service";
+import {User, UserType} from "../user/testUser";
 
 @Component({
   selector: 'app-overview',
@@ -15,25 +16,23 @@ import{ProduktInjectableService} from "../produkt-injectable.service";
 
 
 export class OverviewComponent {
-
+  UserBewertung:any =[];
+  Einkaeufe:any=[];
+ user : User = new User("NoMail","NoName","NoName",this.UserBewertung,this.Einkaeufe, UserType.Kunde,"NoPassword",false);
 
   constructor(private produktservice :ProduktInjectableService) {
   }
   Produktlist:Produkt[]= this.produktservice.getProdukt();
 
+  receiveData(data: User) {
+    this.user = data;
 
-  articleArray : article[] =[
-    {inhaltString:"Dieser Inhalt eines TExtestes hat zwar kein bedeutung abe dient lediglich der Testens von Artikeln" , titleString:"TestStringName"},
-    {inhaltString:"Kurzer Teststring Ingalt" , titleString:"KurzerName"},
-    {inhaltString:"DiKomicsher text name zum komischen testen" , titleString:"KomischerName"}
-  ] ;
-
-
-
-
-  addnewArticle(article : article){
-this.articleArray.push(article)
+    console.log(this.user.email +"Help")
   }
+
+
+
+
 
 
 }

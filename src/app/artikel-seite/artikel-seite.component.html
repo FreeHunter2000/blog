@@ -1,4 +1,12 @@
 <div class ="ProduktSite">
-<app-produkt *ngFor="let produkt of Produktlist" [produkt]="produkt">
+  <a *ngFor="let Produkt of Produktlist"
+     routerLink="/standalone/{{Produkt.produktId}}">
+    {{Produkt.name}}
+  </a>
+
+
+  <app-produkt *ngFor="let produkt of Produktlist" [produkt]="produkt">
 </app-produkt>
+
+
 </div>

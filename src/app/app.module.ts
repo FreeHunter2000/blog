@@ -18,6 +18,7 @@ import {AuthService} from "./user/auth.service";
 import {LoginComponent} from "./user/login.component";
 import { ProduktStandaloneComponent } from './produkt-standalone/produkt-standalone.component';
 import {AdminComponent} from "./user/admin/admin.component";
+import { WarenkorbComponent } from './warenkorb/warenkorb.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import {AdminComponent} from "./user/admin/admin.component";
     LoginComponent,
     ProduktStandaloneComponent,
     AdminComponent,
+    WarenkorbComponent,
 
 
 

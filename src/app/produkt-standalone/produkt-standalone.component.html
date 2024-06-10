@@ -1,5 +1,5 @@
-<div *ngFor="let produkt of produkte" class="produkt-item">
-  <img [src]="produkt.imagePath" alt="{{produkt.name}}">
-  <p class="name">{{produkt.name}}</p>
-  <p class="price">{{produkt.amount | currency}}</p>
-</div>
+
+  <img [src]=produkt?.imagePath alt="{{produkt?.name}}">
+  <p class="name">{{produkt?.name}}</p>
+  <p class="price">{{produkt?.amount | currency}}</p>
+

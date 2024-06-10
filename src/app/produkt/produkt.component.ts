@@ -1,5 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {Produkt} from "./produkt.model";
+import {ProduktInjectableService} from "../produkt-injectable.service";
+import {Router} from "@angular/router";
 
 
 @Component({

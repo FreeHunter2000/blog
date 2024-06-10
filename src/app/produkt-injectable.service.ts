@@ -24,5 +24,10 @@ export class ProduktInjectableService {
      this.Produktlist.push(newProdukt);
   }
 
+
+  getItemById(id: number) {
+    return this.Produktlist.find(item => item.produktId === id);
+  }
+
   constructor() { }
 }
