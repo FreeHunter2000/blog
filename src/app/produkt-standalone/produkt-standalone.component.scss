@@ -1,18 +1,38 @@
-.ProduktStandalone {
+.produkt-list {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
-
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
 }
-.Textbox{
-  display: flex;
-  flex-direction: column;
- margin: 20px;
+
+.produkt-item {
+  background-color: #180404;
+  border: 1px solid #d32b2b;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  max-width: 300px;
+  padding: 20px;
+  text-align: center;
+}
+
+.produkt-item img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.produkt-item h2 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.produkt-item p {
+  color: #d6b737;
+  font-size: 16px;
+}
+
+.produkt-item .price {
+  font-size: 20px;
+  color: #76d550;
+  font-weight: bold;
+  margin-top: 10px;
 }

@@ -1,10 +1,5 @@
-<div class="ProduktStandalone">
-  <div class ="img">
-  <img [src]="Produkt.imagePath"  alt="{{ Produkt.name }}" class="product-image"  style ="max-height:240px ">
-  </div>
-  <div class = "Textbox">
-  <h1 class="product-title">{{ Produkt.name }}</h1>
-  <p class="product-description">{{ Produkt.description }}</p>
-</div>
-
+<div *ngFor="let produkt of produkte" class="produkt-item">
+  <img [src]="produkt.imagePath" alt="{{produkt.name}}">
+  <p class="name">{{produkt.name}}</p>
+  <p class="price">{{produkt.amount | currency}}</p>
 </div>

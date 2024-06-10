@@ -5,6 +5,7 @@ export class Produkt{
   public amount: number;
   public imagePath: string;
 
+
   constructor(produktId:number, name:string, description:string,amount:number, imagePath:string ) {
     this.produktId = produktId;
     this.name = name ;

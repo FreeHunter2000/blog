@@ -1,12 +1,22 @@
-import { Component } from '@angular/core';
-import {Produkt} from "../produkt/produkt.model";
+import { Component, OnInit } from '@angular/core';
+import { Produkt } from '../produkt/produkt.model';
+
 
 @Component({
   selector: 'app-produkt-standalone',
   templateUrl: './produkt-standalone.component.html',
-  styleUrl: './produkt-standalone.component.scss'
+  styleUrls: ['./produkt-standalone.component.scss']
 })
-export class ProduktStandaloneComponent {
-  Produkt:Produkt = new Produkt(69,"Test","TEstTEsteETSTE",0,"https://cdn.stocksnap.io/img-thumbs/960w/food-recipe_G8QICMKLUV.jpg");
+export class ProduktStandaloneComponent implements OnInit {
+  produkte: Produkt[] = [];
 
+  constructor() { }
+
+  ngOnInit(): void {
+    // Beispiel-Daten initialisieren
+    this.produkte = [
+      {produktId: 1, name: 'Produkt 1', description: 'Beschreibung 1', amount: 10, imagePath: 'url1' },
+      {produktId: 2, name: 'Produkt 2', description: 'Beschreibung 2', amount: 20, imagePath: 'url2' }
+    ];
+  }
 }

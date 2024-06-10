@@ -20,7 +20,6 @@ import { ProduktStandaloneComponent } from './produkt-standalone/produkt-standal
 import {AdminComponent} from "./user/admin/admin.component";
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
