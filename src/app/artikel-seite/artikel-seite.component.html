@@ -1,9 +1,4 @@
 <div class ="ProduktSite">
-  <a *ngFor="let Produkt of Produktlist"
-     routerLink="/standalone/{{Produkt.produktId}}">
-    {{Produkt.name}}
-  </a>
-
 
   <app-produkt (onWarenkorbAdd)=handleDataEvent($event) *ngFor="let produkt of Produktlist" [produkt]="produkt">
 </app-produkt>

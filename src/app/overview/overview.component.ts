@@ -1,6 +1,4 @@
 import {Component, EventEmitter, Input, Output,} from '@angular/core';
-import {article, ArticleComponent} from "../article/article.component";
-import {ArticleFormularComponent} from "../article-formular/article-formular.component";
 import { Router } from '@angular/router';
 import {RouterModule} from "@angular/router";
 import {Produkt} from "../produkt/produkt.model";

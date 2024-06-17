@@ -4,7 +4,7 @@ import {ProduktInjectableService} from "../produkt-injectable.service";
 import {Router} from "@angular/router";
 import {userbewertung} from "../warenkorb/userBewertung.model";
 import {warenKorbservice} from "../warenkorb/warenkorb.service";
-import {article} from "../article/article.component";
+
 
 
 @Component({
