@@ -5,7 +5,7 @@
   </a>
 
 
-  <app-produkt *ngFor="let produkt of Produktlist" [produkt]="produkt">
+  <app-produkt (onWarenkorbAdd)=handleDataEvent($event) *ngFor="let produkt of Produktlist" [produkt]="produkt">
 </app-produkt>
 
 

@@ -13,7 +13,7 @@
 
   <div class="Button">
     <div class="warenkorbButton">
- <button>zum Warenkorb Hinzufügen</button>
+ <button (click)=addToWarenkorb()>zum Warenkorb Hinzufügen</button>
     </div>
     <div class="produktButton">
  <button [routerLink]="['/standalone/' +produkt.produktId]">Produkt Ansehen</button>

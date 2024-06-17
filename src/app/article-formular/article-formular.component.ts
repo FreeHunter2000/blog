@@ -22,6 +22,11 @@ export class ArticleFormularComponent {
     this.onArticleAdd.emit(this.article)
   }
 
+  onWarenKorbButtonclick(){
+
+
+  }
+
 }
 
 

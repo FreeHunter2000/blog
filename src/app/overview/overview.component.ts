@@ -6,6 +6,7 @@ import {RouterModule} from "@angular/router";
 import {Produkt} from "../produkt/produkt.model";
 import{ProduktInjectableService} from "../produkt-injectable.service";
 import {User, UserType} from "../user/testUser";
+import {userbewertung} from "../warenkorb/userBewertung.model";
 
 @Component({
   selector: 'app-overview',
@@ -16,8 +17,9 @@ import {User, UserType} from "../user/testUser";
 
 
 export class OverviewComponent {
-  UserBewertung:any =[];
+  UserBewertung:userbewertung[] =[];
   Einkaeufe:any=[];
+
  user : User = new User("NoMail","NoName","NoName",this.UserBewertung,this.Einkaeufe, UserType.Kunde,"NoPassword",false);
 
   constructor(private produktservice :ProduktInjectableService) {

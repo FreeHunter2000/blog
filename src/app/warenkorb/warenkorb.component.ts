@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component , OnChanges} from '@angular/core';
 import {Produkt} from "../produkt/produkt.model";
 import {User, UserType} from "../user/testUser";
+import {userbewertung} from "./userBewertung.model";
+import {warenKorbservice} from "./warenkorb.service";
 
 @Component({
   selector: 'app-warenkorb',
@@ -8,10 +10,10 @@ import {User, UserType} from "../user/testUser";
   styleUrl: './warenkorb.component.scss'
 })
 export class WarenkorbComponent {
-  UserBewertung:any =[];
-  Einkaeufe:any=[];
+  UserBewertung:userbewertung[] =[];
+  Einkaeufe:Produkt[]=[];
   WarenkorbUser : User = new User("NoMail","NoName","NoName",this.UserBewertung,this.Einkaeufe, UserType.Kunde,"NoPassword",false);
-  WarenkorbList: Produkt[]= [];
+  WarenkorbList: Produkt[]= this.warenkornservice.getWarenkorb();
 
 
  addWarenkorb(newProdukt:Produkt){
@@ -21,6 +23,10 @@ export class WarenkorbComponent {
   let index = this.WarenkorbList.indexOf(deleteProdukt);
    this.WarenkorbList.splice(index);
  }
+
+ constructor(private warenkornservice : warenKorbservice) {
+ }
+
 
 
 
