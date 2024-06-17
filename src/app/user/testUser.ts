@@ -1,4 +1,4 @@
-
+import {userbewertung} from "../warenkorb/userBewertung.model";
 
 
 export enum UserType {
@@ -10,17 +10,17 @@ export class User {
   email: string;
   name: string;
   vorname: string;
-  eigeneBwertungen: any[];
+  eigeneBwertungen: userbewertung[];
   eigeneKaeufe: any[];
   userType: UserType;
   password: string;
   loggedIn: boolean;
 
-  constructor(email: string, name: string, vorname: string, eigeneBwertungen: any[], eigeneKaeufe: any[], userType: UserType, password: string, loggedIn: boolean) {
+  constructor(email: string, name: string, vorname: string,eigeneBwertungen:userbewertung[], eigeneKaeufe: any[], userType: UserType, password: string, loggedIn: boolean) {
     this.email = email;
     this.name = name;
     this.vorname = vorname;
-    this.eigeneBwertungen = [];
+    this.eigeneBwertungen = eigeneBwertungen;
     this.eigeneKaeufe = [];
     this.userType = UserType.Kunde;
     this.password = password;

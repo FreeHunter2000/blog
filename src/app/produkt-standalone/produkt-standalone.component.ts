@@ -3,6 +3,7 @@ import { Produkt } from '../produkt/produkt.model';
 import {ProduktInjectableService} from "../produkt-injectable.service";
 import {ActivatedRoute} from "@angular/router";
 import { Router } from '@angular/router';
+import {userbewertung} from "../warenkorb/userBewertung.model";
 
 
 @Component({
@@ -12,7 +13,8 @@ import { Router } from '@angular/router';
 })
 export class ProduktStandaloneComponent implements OnInit {
   produkte: Produkt[] = [];
-  produkt: Produkt | undefined = new Produkt(1,"empty","no",555,"No Path");
+  userBewertung : userbewertung[] =[]; //Produkt muss liste von Bewertungen bekommen
+  produkt: Produkt | undefined = new Produkt(1,"empty","no",555,"No Path", 2.50, this.userBewertung);
 
   constructor(private produktservice :ProduktInjectableService, private route: ActivatedRoute, private router:Router ) { }
 
