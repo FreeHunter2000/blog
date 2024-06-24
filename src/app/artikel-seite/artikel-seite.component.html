@@ -1,7 +1,19 @@
 <div class ="ProduktSite">
-
-  <app-produkt (onWarenkorbAdd)=handleDataEvent($event) *ngFor="let produkt of Produktlist" [produkt]="produkt">
-</app-produkt>
+<div *ngFor="let produkt of Produktlist">
+  <div #myDiv mygottenprodukt="produkt" >
+  </div>
+  <app-produkt (onWarenkorbAdd)=handleDataEvent($event)  [produkt]="produkt" >
+  </app-produkt>
+    <div class="Button">
+      <div class="warenkorbButton">
+        <button (click)=addToWarenkorb(produkt)>zum Warenkorb Hinzufügen</button>
+      </div>
+      <div class="produktButton">
+        <button [routerLink]="['/standalone/' +produkt.produktId]">Produkt Ansehen</button>
+      </div>
+    </div>
+</div>
 
 
 </div>
+

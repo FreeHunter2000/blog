@@ -20,6 +20,8 @@ import { ProduktStandaloneComponent } from './produkt-standalone/produkt-standal
 import {AdminComponent} from "./user/admin/admin.component";
 import { WarenkorbComponent } from './warenkorb/warenkorb.component';
 import {RegisterComponent} from "./user/register/register.component";
+import { UniqueProductsPipe } from './unique-products.pipe';
+import { AdminAnsichtComponent } from './admin-ansicht/admin-ansicht.component';
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import {RegisterComponent} from "./user/register/register.component";
     ProduktStandaloneComponent,
     AdminComponent,
     WarenkorbComponent,
-    RegisterComponent
+    RegisterComponent,
+    UniqueProductsPipe,
+    AdminAnsichtComponent
 
 
 

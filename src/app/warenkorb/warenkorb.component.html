@@ -2,5 +2,16 @@
 
 
 
-<app-produkt *ngFor="let produkt of WarenkorbList" [produkt]="produkt">
-</app-produkt>
+<div>
+  <app-produkt *ngFor="let produkt of WarenkorbList" [produkt]="produkt">
+  </app-produkt>
+
+  <div class ="clearbutton">
+    <button (click)="clearWarenkorbList()">Liste Löschen</button>
+  </div>
+</div>
+
+
+<div *ngFor="let product of uniqueProducts">
+  <p>naamE. {{ product.stringValue }} anzahl. {{ product.numberValue}}</p>
+</div>

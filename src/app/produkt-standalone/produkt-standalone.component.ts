@@ -4,6 +4,7 @@ import {ProduktInjectableService} from "../produkt-injectable.service";
 import {ActivatedRoute} from "@angular/router";
 import { Router } from '@angular/router';
 import {userbewertung} from "../warenkorb/userBewertung.model";
+import {warenKorbservice} from "../warenkorb/warenkorb.service";
 
 
 @Component({
@@ -16,7 +17,7 @@ export class ProduktStandaloneComponent implements OnInit {
   userBewertung : userbewertung[] =[]; //Produkt muss liste von Bewertungen bekommen
   produkt: Produkt | undefined = new Produkt(1,"empty","no",555,"No Path", 2.50, this.userBewertung);
 
-  constructor(private produktservice :ProduktInjectableService, private route: ActivatedRoute, private router:Router ) { }
+  constructor(private produktservice :ProduktInjectableService, private route: ActivatedRoute, private router:Router, private warenkorb :warenKorbservice) { }
 
   ngOnInit(): void {
     // Beispiel-Daten initialisieren
@@ -26,4 +27,10 @@ export class ProduktStandaloneComponent implements OnInit {
     id = +this.route.snapshot.paramMap.get('id');
     this.produkt = this.produktservice.getItemById(id);
   }
+  addToWarenkorb(){
+    if(this.produkt != undefined ) {
+      this.warenkorb.addtoWarenkorblist(this.produkt);
+    }
+  }
+
 }

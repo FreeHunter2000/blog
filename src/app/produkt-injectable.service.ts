@@ -31,5 +31,9 @@ export class ProduktInjectableService {
     return this.Produktlist.find(item => item.produktId === id);
   }
 
+ findItemByName(name:string):Produkt| undefined{
+    return this.Produktlist.find(Produkt => Produkt.name === name);
+  }
+
   constructor() { }
 }
