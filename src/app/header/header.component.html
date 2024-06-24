@@ -3,8 +3,9 @@
   <a *ngIf="userService.currentUser?.userType === this.UserType.Admin" routerLink="/admin">Admin-Seite</a>
   <a routerLink="/" routerLinkActive="active" class="navbar__item">New in`s</a>
   <a routerLink="/article" routerLinkActive="active" class="navbar__item">unsere Produkte</a>
-  <a routerLink="/login" routerLinkActive="active" class="navbar__item">Login</a>
   <a routerLink="/warenkorb" routerLinkActive="active" class="navbar__item">Warenkorb</a>
+
+  <a routerLink="/login" routerLinkActive="active" class="navbar__item">Login</a>
   <div *ngIf="userService.currentUser">
     Hallo {{userService.currentUser.name}}, du bist eingeloggt!
   </div>

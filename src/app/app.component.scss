@@ -2,7 +2,7 @@
   display: block;
   width: 100%;
   min-height: 100vh;
-  background-color: #f4f4f4;
+  background-color: #fbf6f6;
 }
 
 .app-container {
@@ -14,10 +14,11 @@
 
 header {
   width: 100%;
-  background-color: #333;
-  color: #fff;
+  background-color: #249acc;
+  color: #04080c;
   padding: 10px 0;
   text-align: center;
+  border: 1px solid #04080c;
 }
 
 header h1 {
@@ -30,9 +31,9 @@ main {
   width: 100%;
   max-width: 1200px;
   margin: 20px auto;
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 20px;
-  border: 1px solid #ddd;
+ // border: 1px solid #04080c;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -40,8 +41,8 @@ main {
 footer {
   width: 100%;
   padding: 10px 0;
-  background-color: #333;
-  color: #fff;
+  background-color: #249acc;
+  color: #04080c;
   text-align: center;
 }
 
@@ -57,7 +58,7 @@ footer p {
 }
 
 button {
-  background-color: #007bff;
+  background-color: #ffffff;
   color: #fff;
   border: none;
   padding: 10px 20px;

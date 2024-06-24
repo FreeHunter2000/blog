@@ -5,7 +5,7 @@ body {
   width: 100%;
   max-width: 300px;
   padding: 16px;
-  background-color: #9a9999;
+  background-color: #249acc;
   margin: 100px auto 0;
   border: 1px solid black;
   border-radius: 4px;
@@ -16,16 +16,16 @@ input[type=text], input[type=password] {
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
-  background: #f1f1f1;
+  background: #ffffff;
   box-sizing: border-box; /* Hinzugefügt */
 }
 input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
+  background-color: #c8c7c7;
   outline: none;
 }
 .btn {
   background-color: #4CAF50;
-  color: white;
+  color: #04080c;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;

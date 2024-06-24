@@ -1,20 +1,23 @@
 .navbar {
-  background-color: #333333;
+  background-color: #249acc;
   padding: 10px 0;
   text-align: center;
+
+  border: 1px solid #04080c;
 }
 
 .navbar__item {
-  color: #fff;
+  color: #04080c;
   text-decoration: none;
   margin: 0 20px;
   font-size: 18px;
+
 
 }
 
 .navbar__item:hover {
   text-decoration: underline;
-  color: #c8c7c7;
+  color: #ffffff;
 }
 
 .subpage {
@@ -22,9 +25,9 @@
 }
 
 h2 {
-  color: #333;
+  color: #249acc;
 }
 
 p {
-  color: #d60e0e;
+  color: #ffffff;
 }
