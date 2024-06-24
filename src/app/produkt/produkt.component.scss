@@ -1,12 +1,22 @@
+.all {
+  display: flex;
+  flex-wrap: wrap; /* Umbruch der Produkte bei Bedarf */
+  gap: 10px; /* Abstand zwischen den .Produkt-Elementen */
+  flex-direction: row;
+
+}
 
 .Produkt {
   border: 1px solid #04080c;
   padding: 10px;
-  margin-bottom: 15px;
-  margin-right: 15px;
   background-color: #ffffff;
   display: flex; /* Als Flex-Container anzeigen */
   flex-direction: column; /* Jedes Produkt ist eine Spalte */
+  flex: 1; /* Alle .Produkt-Elemente gleichmäßig verteilen */
+  max-width: 300px; /* Maximalbreite für jedes Produkt */
+  margin-bottom: 15px;
+  margin-right: 15px;
+
 }
 
 .Text {
