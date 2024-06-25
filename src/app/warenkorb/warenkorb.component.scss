@@ -1,69 +1,34 @@
 .warenkorb {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Anpassung der Ausrichtung für genaue Abstände */
   margin: 20px auto;
   padding: 20px;
   background-color: #249acc;
   border: 1px solid #04080c;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   max-width: 1200px;
-
-  @media (max-width: 768px) {
-    padding: 10px;
-  }
-}
-
-.products-container {
-  display: flex;
-  flex-wrap: wrap; /* Produkte sollen umgebrochen werden, wenn sie nicht in eine Zeile passen */
-  justify-content: space-between; /* Gleicher Abstand zwischen den Elementen */
-  gap: 20px; /* Abstand zwischen den Produkten */
-  width: 100%; /* Volle Breite innerhalb des Containers */
-  margin-top: 20px; /* Oben Abstand zwischen den Produkten */
-}
-
-/* Stile für das einzelne Produkt */
-app-produkt {
-  width: 100%;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background-color: #249acc;
-  border: 1px solid #249acc;
-  border-radius: 5px;
-  margin-bottom: 20px;
 
-  .product-info {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 10px;
-  }
+  .app-produkt {
+    width: calc(33.33% - 20px); /* Berechnete Breite für 3 Artikel pro Reihe */
+    margin-bottom: 20px; /* Abstand zwischen den Zeilen */
+    padding: 10px; /* Optional: Innenabstand für jedes Produkt */
 
-  .product-title {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
-  }
+    @media (max-width: 992px) {
+      width: calc(33.33% - 20px); /* Für etwas kleinere Bildschirme, 3 Artikel pro Reihe */
+    }
 
-  .product-description {
-    font-size: 1em;
-    color: #04080c;
-    margin-bottom: 10px; /* Kleinerer Abstand unter der Beschreibung */
-  }
+    @media (max-width: 768px) {
+      width: calc(50% - 20px); /* Für kleinere Bildschirme, 2 Artikel pro Reihe */
+    }
 
-  .product-image {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    @media (max-width: 480px) {
+      width: 100%; /* Auf kleinen Bildschirmen, ein Artikel pro Reihe */
+    }
   }
 }
+
 
 //////////////////////////////////////////////////////
 
