@@ -15,24 +15,16 @@
   text-align: center;
 }
 
-.produkt-item img {
-  max-width: 100%;
-  border-radius: 5px;
-}
 
-.produkt-item h2 {
-  font-size: 24px;
-  margin: 10px 0;
-}
-
-.produkt-item p {
-  color: #249acc;
-  font-size: 16px;
-}
-
-.produkt-item .price {
+.price {
   font-size: 20px;
-  color: #249acc;
+  color: #04080c;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.name {
+  font-size: 20px;
+  color: #04080c;
   font-weight: bold;
   margin-top: 10px;
 }
@@ -48,6 +40,7 @@
   border: none; /* Kein Rahmen um den Button */
   cursor: pointer; /* Mauszeiger wird zur Hand */
   transition: background-color 0.3s ease, color 0.3s ease; /* Sanfter Übergang */
+  border-radius: 5px;
 }
 
 .Button button:hover {
