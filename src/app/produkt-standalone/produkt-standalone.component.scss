@@ -1,18 +1,15 @@
-.produkt-list {
+.all {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-wrap: wrap; // Umbruch der Produkte bei Bedarf
+  gap: 10px; // Abstand zwischen den .Produkt-Elementen
+  flex-direction: row;
+
 }
 
-.produkt-item {
-  background-color: #249acc;
-  border: 1px solid #249acc;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  max-width: 300px;
-  padding: 20px;
-  text-align: center;
+
+img {
+  max-width: 100%; // Beispielstil
+  height: 200px;   // Beispielstil
 }
 
 
