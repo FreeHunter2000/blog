@@ -1,0 +1,103 @@
+.warenkorb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #249acc;
+  border: 1px solid #04080c;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap; /* Produkte sollen umgebrochen werden, wenn sie nicht in eine Zeile passen */
+  justify-content: space-between; /* Gleicher Abstand zwischen den Elementen */
+  gap: 20px; /* Abstand zwischen den Produkten */
+  width: 100%; /* Volle Breite innerhalb des Containers */
+  margin-top: 20px; /* Oben Abstand zwischen den Produkten */
+}
+
+/* Stile für das einzelne Produkt */
+app-produkt {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #249acc;
+  border: 1px solid #249acc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+
+  .product-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  .product-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .product-description {
+    font-size: 1em;
+    color: #04080c;
+    margin-bottom: 10px; /* Kleinerer Abstand unter der Beschreibung */
+  }
+
+  .product-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+//////////////////////////////////////////////////////
+
+
+  .clearbutton {
+    display: flex;
+    justify-content: center; /* Zentriert den Button horizontal */
+    align-items: center; /* Zentriert den Button vertikal */
+    margin: 20px 0; /* Außenabstand oben und unten */
+
+    button {
+      background-color: #e74c3c; /* Hintergrundfarbe des Buttons */
+      color: #fff; /* Textfarbe des Buttons */
+      border: none; /* Kein Rahmen */
+      border-radius: 5px; /* Abgerundete Ecken */
+      padding: 10px 20px; /* Innenabstand */
+      font-size: 1em; /* Schriftgröße */
+      cursor: pointer; /* Mauszeiger wird zur Hand */
+      transition: background-color 0.3s ease, transform 0.3s ease; /* Sanfter Übergang bei Hover */
+
+      &:hover {
+        background-color: #c0392b; /* Dunklere Hintergrundfarbe beim Hover */
+        transform: scale(1.05); /* Leichte Vergrößerung beim Hover */
+      }
+
+      &:active {
+        background-color: #a93226; /* Noch dunklere Hintergrundfarbe beim Klick */
+        transform: scale(1); /* Zurück zur Originalgröße beim Klick */
+      }
+
+      &:focus {
+        outline: none; /* Entfernt den Standard-Fokusrahmen */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Fügt einen Schatten hinzu, um den Fokus anzuzeigen */
+      }
+    }
+  }
+

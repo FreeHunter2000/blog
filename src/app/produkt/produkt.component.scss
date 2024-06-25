@@ -63,25 +63,25 @@
   display: flex;
   justify-content: center;
 
-
+////////////////////////////////////////
 }
 .Button {
   display: flex;
   flex-direction: row;
-
+  gap: 10px; /* Abstand zwischen den Buttons */
 }
 
 .Button button {
   padding: 15px 30px; /* Größere Polsterung für den Button */
   font-size: 16px; /* Größere Schriftgröße */
-  background-color: #249acc; /* Standard Hintergrundfarbe des Buttons */
-  color: #04080c; /* Standard Textfarbe des Buttons */
-  border: 1px solid #04080c;
+  background-color: #4CAF50; /* Standard Hintergrundfarbe des Buttons */
+  color: white; /* Standard Textfarbe des Buttons */
+  border: none; /* Kein Rahmen um den Button */
   cursor: pointer; /* Mauszeiger wird zur Hand */
   transition: background-color 0.3s ease, color 0.3s ease; /* Sanfter Übergang */
 }
 
 .Button button:hover {
-  background-color: #249acc; /* Hintergrundfarbe ändern beim Hover */
+  background-color: #2cdcdc; /* Hintergrundfarbe ändern beim Hover */
   color: white; /* Textfarbe ändern beim Hover */
 }

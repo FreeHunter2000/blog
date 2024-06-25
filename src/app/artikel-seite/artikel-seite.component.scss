@@ -1,6 +1,7 @@
 .ProduktSite {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap; /* Produkte umbrechen, wenn nicht genug Platz */
+  justify-content: space-evenly;
   align-items: center;
   margin: 20px auto;
   padding: 20px;
@@ -8,28 +9,20 @@
   border: 1px solid #04080c;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   max-width: 1200px;
-}
 
-@media (max-width: 768px) {
-  .ProduktSite {
+  @media (max-width: 768px) {
     padding: 10px;
   }
 }
 
 app-produkt {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap; /* Elemente werden umgebrochen, wenn sie nicht in eine Zeile passen */
-  justify-content: space-between; /* Gleicher Abstand zwischen den Elementen */
-}
-
-app-produkt > * {
-  flex: 1 1 calc(25% - 20px); /* Flexibler Platz für 4 Elemente pro Zeile, mit Abstand */
-  margin: 10px; /* Außenabstand zwischen den Elementen */
+  width: calc(25% - 20px); /* Platz für 4 Elemente pro Zeile mit Abstand */
+  margin-right: 20px; /* Außenabstand zwischen den Produkten */
+  margin-bottom: 20px; /* Abstand unter den Produkten */
 }
 
 .product-info {
-  width: 100%;
+  width: calc(75% - 20px); /* Platz für Produktinformationen */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -55,4 +48,37 @@ app-produkt > * {
   height: auto;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Button {
+  display: flex;
+  gap: 5px; /* Abstand zwischen den Buttons */
+}
+
+.warenkorbButton button,
+.produktButton button {
+  padding: 8px 8px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Sanfter Übergang */
+}
+
+.warenkorbButton button {
+  background-color: #4CAF50; /* Hintergrundfarbe grün */
+  color: black;
+
+  &:hover {
+    background-color: #45a049; /* Dunklere Hintergrundfarbe grün */
+  }
+}
+
+.produktButton button {
+  background-color: #76d550; /* Hintergrundfarbe blau */
+  color: black; /* Textfarbe weiß */
+
+  &:hover {
+    background-color: #6abf48; /* Dunklere Hintergrundfarbe blau */
+  }
 }

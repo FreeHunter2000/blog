@@ -3,21 +3,24 @@ body {
   background-color: #ffffff;
 }
 .container {
-  width: 100%;
-  max-width: 300px;
-  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  padding: 20px;
   background-color: #249acc;
-  margin: 100px auto 0;
-  border: 1px solid black;
-  border-radius: 4px;
-  color: #04080c;
+  border: 1px solid #04080c;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
 }
 input[type=text], input[type=password] {
-  width: 100%;
+  width: 25%;
   padding: 15px;
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
+  font-size: 1em;
+  border-radius: 5px;
   background: #ffffff;
   box-sizing: border-box; /* Hinzugefügt */
 }
@@ -35,8 +38,11 @@ input[type=text]:focus, input[type=password]:focus {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 25%;
   opacity: 0.9;
+  border-radius: 5px;
+  font-size: 1em;
+
 }
 .btn:hover {
   opacity:1;
@@ -47,4 +53,14 @@ input[type=text]:focus, input[type=password]:focus {
   .container {
     margin-top: 20px;
   }
+}
+.psw{
+  color: #04080c;
+}
+.register{
+  color: #04080c;
+
+}
+.box{
+  color: #04080c;
 }
