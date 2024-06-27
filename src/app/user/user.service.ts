@@ -11,7 +11,7 @@ export class UserService {
   userbewertung:userbewertung[]=[];
   einkaufe:Produkt[]=[];
   users: User[] = [];
-  currentUser: User | undefined = new User("NoMail","NoName","NoName",this.userbewertung,this.einkaufe, UserType.Kunde,"NoPassword",false);
+  currentUser: User | undefined = new User("NoMail","NoName","NoName",this.userbewertung,this.einkaufe, UserType.NoUser,"NoPassword",false);
 
   constructor() {this.users.push({
     email: 'benutzer1@example.com',

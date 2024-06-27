@@ -28,7 +28,7 @@ export class User {
     this.vorname = vorname;
     this.eigeneBwertungen = eigeneBwertungen;
     this.eigeneKaeufe = [];
-    this.userType = UserType.Kunde;
+    this.userType = userType;
     this.password = password;
     this.loggedIn = true;
     this.warenkorb =[];

@@ -4,10 +4,10 @@
   <div class = "Userlistheader">Liste aller User </div>
   <div>Anzahl der User:{{Userlist.length}}</div>
   <div *ngFor="let user of Userlist">
-    <p>{{user.name}}</p>
-    <p>{{user.email}}</p>
-    <p>{{user.password}}</p>
-    <p> {{user.userType}}</p>
+    <p>Vorname:{{user.name}}</p>
+    <p>Email:{{user.email}}</p>
+    <p>Password:{{user.password}}</p>
+    <p>UserType:{{user.userType}}</p>
   </div>
 </div>
 
@@ -64,8 +64,8 @@
   <div *ngFor="let Produkt of Produktlist">
     <div class="Produktlistitem">
     <p>Name des Produkt: {{Produkt.name}}</p>
-    <p>Preis des Produkts: {{Produkt.price}}</p>
-    <p>Anzahl vorhandener Produkte: {{Produkt.amount}} Euro</p>
+    <p>Preis des Produkts: {{Produkt.price}} Euro</p>
+    <p>Anzahl vorhandener Produkte: {{Produkt.amount}} </p>
     <img src ="{{Produkt.imagePath}}" alt ="Cant Find it" class = "img-responsive"  style ="max-height:80px ">
     </div>
   </div>
