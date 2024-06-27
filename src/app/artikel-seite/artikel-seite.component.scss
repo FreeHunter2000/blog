@@ -1,10 +1,10 @@
 .ProduktSite {
   display: flex;
-  flex-wrap: wrap; /* Produkte umbrechen, wenn nicht genug Platz */
+  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  margin: 20px auto;
-  padding: 20px;
+  margin: 20px auto; //außen
+  padding: 20px; //innen
   background-color: #249acc;
   border: 1px solid #04080c;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -16,13 +16,13 @@
 }
 
 app-produkt {
-  width: calc(25% - 20px); /* Platz für 4 Elemente pro Zeile mit Abstand */
-  margin-right: 20px; /* Außenabstand zwischen den Produkten */
-  margin-bottom: 20px; /* Abstand unter den Produkten */
+  width: calc(25% - 20px);
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .product-info {
-  width: calc(75% - 20px); /* Platz für Produktinformationen */
+  width: calc(75% - 20px);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -30,7 +30,7 @@ app-produkt {
 }
 
 .product-title {
-  font-size: 1.5em;
+  font-size: 1.5em; //schriftgröße
   font-weight: bold;
   margin-bottom: 10px;
   color: #333;
@@ -52,7 +52,7 @@ app-produkt {
 
 .Button {
   display: flex;
-  gap: 5px; /* Abstand zwischen den Buttons */
+  gap: 5px; //zwischen
 }
 
 .warenkorbButton button,
@@ -62,23 +62,27 @@ app-produkt {
   border: none;
   border-radius: 5px;
   font-size: 14px;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Sanfter Übergang */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .warenkorbButton button {
-  background-color: #4CAF50; /* Hintergrundfarbe grün */
+  background-color: #58c65d;
   color: black;
 
   &:hover {
-    background-color: #45a049; /* Dunklere Hintergrundfarbe grün */
+    transform: scale(1.05);
+    color: white;
+    background-color: #3f8f43;
   }
 }
 
 .produktButton button {
-  background-color: #76d550; /* Hintergrundfarbe blau */
-  color: black; /* Textfarbe weiß */
+  background-color: #76d550;
+  color: black;
 
   &:hover {
-    background-color: #6abf48; /* Dunklere Hintergrundfarbe blau */
+    transform: scale(1.05);
+    color: white;
+    background-color: #49a84d;
   }
 }

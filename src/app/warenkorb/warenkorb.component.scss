@@ -1,67 +1,67 @@
 .warenkorb {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; /* Anpassung der Ausrichtung für genaue Abstände */
+  flex-direction: column;
   margin: 20px auto;
   padding: 20px;
   background-color: #249acc;
   border: 1px solid #04080c;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   max-width: 1200px;
-  flex-direction: column;
 
-  .app-produkt {
-    width: calc(33.33% - 20px); /* Berechnete Breite für 3 Artikel pro Reihe */
-    margin-bottom: 20px; /* Abstand zwischen den Zeilen */
-    padding: 10px; /* Optional: Innenabstand für jedes Produkt */
+  .produkt-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 15px;
+  }
+
+  .produkt-item {
+    flex: 1 1 calc(33.33% - 20px);
+    margin: 10px;
 
     @media (max-width: 992px) {
-      width: calc(33.33% - 20px); /* Für etwas kleinere Bildschirme, 3 Artikel pro Reihe */
+      flex: 1 1 calc(33.33% - 20px);
     }
 
     @media (max-width: 768px) {
-      width: calc(50% - 20px); /* Für kleinere Bildschirme, 2 Artikel pro Reihe */
+      flex: 1 1 calc(50% - 20px);
     }
 
     @media (max-width: 480px) {
-      width: 100%; /* Auf kleinen Bildschirmen, ein Artikel pro Reihe */
+      flex: 1 1 100%;
     }
   }
 }
 
-
-//////////////////////////////////////////////////////
-
-
   .clearbutton {
     display: flex;
-    justify-content: center; /* Zentriert den Button horizontal */
-    align-items: center; /* Zentriert den Button vertikal */
-    margin: 20px 0; /* Außenabstand oben und unten */
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
 
     button {
-      background-color: #e74c3c; /* Hintergrundfarbe des Buttons */
-      color: #fff; /* Textfarbe des Buttons */
-      border: none; /* Kein Rahmen */
-      border-radius: 5px; /* Abgerundete Ecken */
-      padding: 10px 20px; /* Innenabstand */
-      font-size: 1em; /* Schriftgröße */
-      cursor: pointer; /* Mauszeiger wird zur Hand */
-      transition: background-color 0.3s ease, transform 0.3s ease; /* Sanfter Übergang bei Hover */
+      background-color: #e74c3c;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
 
       &:hover {
-        background-color: #c0392b; /* Dunklere Hintergrundfarbe beim Hover */
-        transform: scale(1.05); /* Leichte Vergrößerung beim Hover */
+        background-color: #c0392b;
+        transform: scale(1.05);
       }
 
       &:active {
-        background-color: #a93226; /* Noch dunklere Hintergrundfarbe beim Klick */
-        transform: scale(1); /* Zurück zur Originalgröße beim Klick */
+        background-color: #a93226;
+        transform: scale(1);
       }
 
       &:focus {
-        outline: none; /* Entfernt den Standard-Fokusrahmen */
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Fügt einen Schatten hinzu, um den Fokus anzuzeigen */
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
       }
     }
   }

@@ -1,21 +1,22 @@
 .all {
   display: flex;
-  flex-wrap: wrap; // Umbruch der Produkte bei Bedarf
-  gap: 10px; // Abstand zwischen den .Produkt-Elementen
+  flex-wrap: wrap; // Umbruch auf neue Zeile
+  gap: 10px;
   flex-direction: row;
 
 }
 
 .Produkt {
+  margin-top: 10px;
   border: 1px solid #04080c;
-  padding: 10px;
+  padding: 20px;
   background-color: #ffffff;
-  display: flex; /* Als Flex-Container anzeigen */
-  flex-direction: column; /* Jedes Produkt ist eine Spalte */
-  flex: 1; /* Alle .Produkt-Elemente gleichmäßig verteilen */
-  max-width: 300px; /* Maximalbreite für jedes Produkt */
-  margin-bottom: 15px;
-  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+  flex: 1; //gleichmaeßíg verteilen
+  max-width: 300px;
+  margin-bottom: 5px;
+  margin-right: 5px;
 
 }
 
@@ -38,10 +39,10 @@
 
 
 .image {
-  flex-shrink: 0;
+  flex-shrink: 0;//schrumpfen
   width: 100px;
   height: 100px;
-  overflow: hidden;
+  overflow: hidden; //schneidet wenn zu groß
 }
 
 .image {
@@ -53,9 +54,9 @@
 }
 
 .image img {
-  width: 100%; /* Bildbreite auf 100% setzen */
-  height: 100%; /* Bildhöhe auf 100% setzen */
-  object-fit: cover; /* Bild so zuschneiden, dass es den Rahmen ausfüllt */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; //schneidet das es den Rahmen ausfüllt
 }
 
 .descriptionAndImage{
@@ -63,25 +64,26 @@
   display: flex;
   justify-content: center;
 
-////////////////////////////////////////
 }
 .Button {
   display: flex;
   flex-direction: row;
-  gap: 10px; /* Abstand zwischen den Buttons */
+  gap: 10px;
+
 }
 
 .Button button {
-  padding: 15px 30px; /* Größere Polsterung für den Button */
-  font-size: 16px; /* Größere Schriftgröße */
-  background-color: #4CAF50; /* Standard Hintergrundfarbe des Buttons */
-  color: white; /* Standard Textfarbe des Buttons */
-  border: none; /* Kein Rahmen um den Button */
-  cursor: pointer; /* Mauszeiger wird zur Hand */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Sanfter Übergang */
+  padding: 15px 30px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;//sanfter Übergang
+
 }
 
 .Button button:hover {
-  background-color: #2cdcdc; /* Hintergrundfarbe ändern beim Hover */
-  color: white; /* Textfarbe ändern beim Hover */
+  background-color: #2cdcdc;
+  color: white;
 }

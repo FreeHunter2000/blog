@@ -1,6 +1,6 @@
 
 <nav class="navbar">
-  <a *ngIf="userService.currentUser?.userType === this.UserType.Admin" routerLink="/admin">Admin-Seite</a>
+  <a *ngIf="userService.currentUser?.userType === this.UserType.Admin" routerLink="/admin" class="navbar__item">Admin-Seite</a>
   <a routerLink="/" routerLinkActive="active" class="navbar__item">New in`s</a>
   <a routerLink="/article" routerLinkActive="active" class="navbar__item">unsere Produkte</a>
   <a routerLink="/warenkorb" routerLinkActive="active" class="navbar__item">Warenkorb</a>
