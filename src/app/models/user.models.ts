@@ -15,7 +15,8 @@ export interface User{
   warenkorb: Produkt[];
 }
 
-export const UserSchema = new Schema<User>({
+export const UserSchema = new Schema<User>(
+  {
   name: {type: String, required: true},
   vorname: {type: String, required: true},
   eigeneBwertungen: {type: [], required: false},

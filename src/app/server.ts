@@ -6,7 +6,7 @@ import express from "express";
 import cors from "cors";
 import { sample_foods, sample_tags, sample_users } from "./routers/data";
 
-import foodRouter from './routers/product.router';
+import foodRouter from './routers/food.router';
 import userRouter from './routers/user.router';
 import { dbConnect } from './configs/database.config';
 import jwt from "jsonwebtoken";
