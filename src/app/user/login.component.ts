@@ -16,15 +16,19 @@ export class LoginComponent { // Es ist üblich, Komponentenklassen mit Großbuc
   email: string= ''; // Sie müssen email und password definieren
   password: string= '';
 
+  newuserService:UserService;
+
+  constructor(private userService: UserService, private authService: AuthService) {
+    this.newuserService = userService;
 
 
-  constructor(protected userService: UserService, private authService: AuthService) { } // AuthService muss im Konstruktor injiziert werden
+  } // AuthService muss im Konstruktor injiziert werden
 
   UserList: User[] = this.userService.getAllUser();
 
   onLogin(): void {
    if( this.authService.login(this.email, this.password)){
-     this.UserChange.emit(this.userService.getUser(this.email)) // sucht den User der die selbe mail hat wie der User bei dem die authentifikation funktioniert hat und übergibt ihn an overview
+     this.newuserService.setCurrentUser(this.userService.getUser(this.email))
    }
   }
 

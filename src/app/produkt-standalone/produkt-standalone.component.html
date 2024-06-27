@@ -2,7 +2,7 @@
 
   <img [src]=produkt?.imagePath alt="{{produkt?.name}}">
   <p class="name">{{produkt?.name}}</p>
-  <p class="price">{{produkt?.amount | currency}}</p>
+  <p class="price">{{produkt?.price | currency}}</p>
   <p class="description">{{produkt?.description}}</p>
 
   </div>
@@ -12,4 +12,4 @@
   </div>
 </div>
 
-
+  <app-userbewertung [produktname] = "produkt?.name"></app-userbewertung>

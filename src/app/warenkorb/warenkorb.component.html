@@ -3,12 +3,37 @@
   <div class="produkt-container">
     <app-produkt *ngFor="let produkt of WarenkorbList" [produkt]="produkt" class="produkt-item"></app-produkt>
   </div>
+<div class="Warekorb" [hidden]="showKaufAnsicht">
+<div>
+  <app-produkt *ngFor="let produkt of WarenkorbList" [produkt]="produkt">
+  </app-produkt>
 
-  <div class="clearbutton">
+  <div class ="clearbutton">
     <button (click)="clearWarenkorbList()">Liste Löschen</button>
   </div>
+</div>
 
-  <div *ngFor="let product of uniqueProducts">
-    <p>naamE. {{ product.stringValue }} anzahl. {{ product.numberValue }}</p>
+</div>
+
+
+<div>
+<button (click)="toggleKaufAnsicht()" >Kaufen </button>
+</div>
+
+
+
+  <div class ="KaufAnsicht">
+  <app-kauf-ansicht *ngIf="showKaufAnsicht" [produktlist] = WarenkorbList></app-kauf-ansicht>
   </div>
+
+
+<div class="reviews">
+  <h3>Bewertungen:</h3>
+  <div *ngFor="let review of UserBewertung">
+    <p>Name des Produkts: {{review.produktName}}</p>
+    <p>{{ review.kommentar }}</p>
+    <app-star-rating [rating]="review.bewertung" [readonly]="true"></app-star-rating>
+  </div>
+</div>
+
 </div>

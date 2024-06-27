@@ -5,6 +5,8 @@ import {userbewertung} from "./userBewertung.model";
 import {warenKorbservice} from "./warenkorb.service";
 import {UniqueProductsPipe} from "../unique-products.pipe";
 import {ProduktInjectableService} from "../produkt-injectable.service";
+import {UserService} from "../user/user.service";
+import {UserbewertungService} from "../userbewertung/userbewertung-injectable";
 
 @Component({
   selector: 'app-warenkorb',
@@ -19,6 +21,10 @@ export class WarenkorbComponent {
   WarenkorbList: Produkt[]= this.warenkornservice.getWarenkorb();
 
   uniqueProducts!: any[];
+
+
+  showKaufAnsicht = false;
+
  addWarenkorb(newProdukt:Produkt){
    this.WarenkorbList.push(newProdukt)
  }
@@ -27,15 +33,19 @@ export class WarenkorbComponent {
    this.WarenkorbList.splice(index);
  }
 
- constructor(private warenkornservice : warenKorbservice, private uniqueProductsPipe: UniqueProductsPipe, private  produktlist: ProduktInjectableService) {
+ constructor(private warenkornservice : warenKorbservice, private uniqueProductsPipe: UniqueProductsPipe, private  produktlist: ProduktInjectableService , userservice: UserService, private userbewertungsservice :UserbewertungService) {
    this.uniqueProducts = this.uniqueProductsPipe.transform(this.warenkornservice.getWarenkorb());
    console.log(this.uniqueProducts)
-   console.log("HElp")
+   console.log("HElp");
 
-   for(let product of this.uniqueProducts){
+ userservice.setCurrentUserWarenkorb(this.WarenkorbList)
 
-   }
+   this.UserBewertung = userbewertungsservice.getUserbewertunglisteUser();
+
+
  }
+
+
 
  clearWarenkorbList(){
 this.warenkornservice.clearWarenkorb()
@@ -47,5 +57,11 @@ this.warenkornservice.clearWarenkorb()
  setListAgain(){
    this.uniqueProducts = this.uniqueProductsPipe.transform(this.WarenkorbList);
  }
+
+
+
+  toggleKaufAnsicht() {
+    this.showKaufAnsicht = !this.showKaufAnsicht;
+  }
 
 }

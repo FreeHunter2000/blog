@@ -30,6 +30,7 @@ export class RegisterComponent {
         name: this.name,
         vorname: this.vorname,
         password: this.password,
+        warenkorb:[]
       };
         this.userService.addUser(user)
       // Hier würden Sie den Benutzer in Ihrer Datenbank speichern

@@ -1,0 +1,23 @@
+
+
+<div class ="Kaufbereich">
+
+  <div class="Produktliste">
+    <div class ="Produktliste">Liste der zu kaufenden Produkte </div>
+    <div *ngFor="let produkt of produktlist">
+      <app-produkt [produkt]="produkt" >
+      </app-produkt>
+    </div>
+
+
+  </div>
+
+  <div class ="Betrag">
+    Der Betrag des Einkaufs beträgt:  {{gesamtBetrag}}
+  </div>
+  <div>
+    <button (click)=" closeComponent()">Jetzt Kaufen!</button>
+
+  </div>
+
+</div>

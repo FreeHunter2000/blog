@@ -1,0 +1,21 @@
+<div class="review-form">
+  <form (ngSubmit)="onSubmit()" #reviewForm="ngForm">
+    <div>
+      <label for="comment">Kommentar:</label>
+      <textarea id="comment" name="comment" [(ngModel)]="this.newUserbewertung.kommentar" required></textarea>
+    </div>
+    <div>
+      <label>Bewertung:</label>
+      <app-star-rating [(rating)]="newUserbewertung.bewertung"></app-star-rating>
+    </div>
+    <button type="submit" [disabled]="!reviewForm.form.valid">Absenden</button>
+  </form>
+</div>
+
+<div class="reviews">
+  <h3>Bewertungen:</h3>
+  <div *ngFor="let review of UserbewertungsListe">
+    <p>{{ review.kommentar }}</p>
+    <app-star-rating [rating]="review.bewertung" [readonly]="true"></app-star-rating>
+  </div>
+</div>

@@ -1,1 +1,105 @@
 <p>admin-ansicht works!</p>
+<div class ="Userzeug">
+<div class ="UserListe">
+  <div class = "Userlistheader">Liste aller User </div>
+  <div>Anzahl der User:{{Userlist.length}}</div>
+  <div *ngFor="let user of Userlist">
+    <p>{{user.name}}</p>
+    <p>{{user.email}}</p>
+    <p>{{user.password}}</p>
+    <p> {{user.userType}}</p>
+  </div>
+</div>
+
+
+  <div class ="userErstellung">
+    <div class="UserErstellung">Neue User erstellen</div>
+
+    <div>Vorname:
+    <input type="text" [(ngModel)] ="newVorname">
+    </div>
+
+    <div>Name:
+    <input type="text" [(ngModel)]="newName">
+    </div>
+
+    <div>E-mail:
+    <input type="text" [(ngModel)]="newEmail">
+    </div>
+
+    <div>Passwort:
+    <input type="text" [(ngModel)]="newPassword">
+    </div>
+
+
+<div class="UserCheckbox">
+   Soll der User ein Kunde oder ein Admin werden?
+    <div class ="checkboxKunde"> Kunde
+      <label>
+      <input type="checkbox" name="options" [checked]="newUsertype === UserType.Kunde" (change)="onCheckboxcheck(UserType.Kunde)" value="Hier Namen eingeben" >
+      </label>
+
+
+      <div class ="checkboxAdmin">
+        <label>Admin
+        <input type="checkbox" name="options" [checked]="newUsertype === UserType.Admin" (change)="onCheckboxcheck(UserType.Admin)" value="Hier Namen eingeben" >
+        </label>
+      </div>
+    </div>
+
+  </div>
+
+    <div class="createUserButton">
+      <button (click)="createNewUser()" >create User</button>
+    </div>
+
+</div>
+
+</div>
+
+<div class="Produktstuff">
+<div class="Produktlist">
+  <div class = "Produktlistheader">Liste aller Produkte </div>
+  <div>Anzahl der Produkte: {{Produktlist.length}}</div>
+  <div *ngFor="let Produkt of Produktlist">
+    <div class="Produktlistitem">
+    <p>Name des Produkt: {{Produkt.name}}</p>
+    <p>Preis des Produkts: {{Produkt.price}}</p>
+    <p>Anzahl vorhandener Produkte: {{Produkt.amount}} Euro</p>
+    <img src ="{{Produkt.imagePath}}" alt ="Cant Find it" class = "img-responsive"  style ="max-height:80px ">
+    </div>
+  </div>
+</div>
+
+  <div class ="ProduktErstellung">
+    <div class="UserErstellung">Hier kannst du ein neues Produkt erstellen!</div>
+
+    <div>Name:
+      <input type="text" [(ngModel)] ="newPrName">
+    </div>
+
+    <div>Stückzahl:
+      <input type="text" [(ngModel)]="newPrAmount">
+    </div>
+
+    <div>Beschreibung des Produkts:
+      <input type="text" [(ngModel)]="newPrDescription">
+    </div>
+
+    <div>Imagepath(nicht notwendig):
+      <input type="text" [(ngModel)]="newPrImagePath">
+    </div>
+
+    <div>Preis:
+      <input type="text" [(ngModel)]="newPrPrice">
+    </div>
+
+    <div class="createProduktButton">
+      <button (click)="createProdukt()" >create Produkt</button>
+    </div>
+
+  </div>
+
+
+
+</div>

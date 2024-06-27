@@ -15,7 +15,7 @@ import {warenKorbservice} from "../warenkorb/warenkorb.service";
 export class ProduktStandaloneComponent implements OnInit {
   produkte: Produkt[] = [];
   userBewertung : userbewertung[] =[]; //Produkt muss liste von Bewertungen bekommen
-  produkt: Produkt | undefined = new Produkt(1,"empty","no",555,"No Path", 2.50, this.userBewertung);
+  produkt: Produkt = new Produkt(1,"empty","no",555,"No Path", 2.50, this.userBewertung);
 
   constructor(private produktservice :ProduktInjectableService, private route: ActivatedRoute, private router:Router, private warenkorb :warenKorbservice) { }
 
@@ -25,6 +25,7 @@ export class ProduktStandaloneComponent implements OnInit {
     let id: number;
     // @ts-ignore
     id = +this.route.snapshot.paramMap.get('id');
+    // @ts-ignore
     this.produkt = this.produktservice.getItemById(id);
   }
   addToWarenkorb(){

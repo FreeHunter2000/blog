@@ -22,6 +22,9 @@ import { WarenkorbComponent } from './warenkorb/warenkorb.component';
 import {RegisterComponent} from "./user/register/register.component";
 import { UniqueProductsPipe } from './unique-products.pipe';
 import { AdminAnsichtComponent } from './admin-ansicht/admin-ansicht.component';
+import { KaufAnsichtComponent } from './kauf-ansicht/kauf-ansicht.component';
+import { UserbewertungComponent } from './userbewertung/userbewertung.component';
+import { StarRatingComponent } from './star-rating/star-rating.component';
 
 
 @NgModule({
@@ -38,7 +41,10 @@ import { AdminAnsichtComponent } from './admin-ansicht/admin-ansicht.component';
     WarenkorbComponent,
     RegisterComponent,
     UniqueProductsPipe,
-    AdminAnsichtComponent
+    AdminAnsichtComponent,
+    KaufAnsichtComponent,
+    UserbewertungComponent,
+    StarRatingComponent
 
 
 

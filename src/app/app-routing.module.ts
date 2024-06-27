@@ -9,6 +9,7 @@ import {StandaloneComponentScopeReader} from "@angular/compiler-cli/src/ngtsc/sc
 import {ProduktStandaloneComponent} from "./produkt-standalone/produkt-standalone.component";
 import{RegisterComponent} from "./user/register/register.component";
 import {WarenkorbComponent} from "./warenkorb/warenkorb.component";
+import{AdminAnsichtComponent} from "./admin-ansicht/admin-ansicht.component";
 
 const routes: Routes = [
   //*{path:'', component:OverviewComponent},
@@ -19,7 +20,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   {path:'warenkorb',component: WarenkorbComponent},
-  { path: 'admin', component: AdminComponent, canActivate: [AdminGuard] },
+  { path: 'admin', component: AdminAnsichtComponent, canActivate: [AdminGuard] },
   { path: 'standalone/:id', component: ProduktStandaloneComponent}
 ];
 

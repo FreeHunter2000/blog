@@ -1,13 +1,17 @@
 import {Injectable} from '@angular/core';
 import {User, UserType} from './testUser';
+import {Produkt} from "../produkt/produkt.model";
+import {userbewertung} from "../warenkorb/userBewertung.model";
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
+  userbewertung:userbewertung[]=[];
+  einkaufe:Produkt[]=[];
   users: User[] = [];
-  currentUser: User | undefined;
+  currentUser: User | undefined = new User("NoMail","NoName","NoName",this.userbewertung,this.einkaufe, UserType.Kunde,"NoPassword",false);
 
   constructor() {this.users.push({
     email: 'benutzer1@example.com',
@@ -17,7 +21,8 @@ export class UserService {
     eigeneKaeufe: [],
     userType: UserType.Admin,
     password: 'password1',
-    loggedIn: true
+    loggedIn: true,
+    warenkorb:[]
   }) }
 
   addUser(user: User) {
@@ -57,6 +62,29 @@ export class UserService {
       console.log(`Benutzer ${email} nicht gefunden.`);
     }
   }
-  setCurrentUser(email: string | undefined) {}
+
+  setCurrentUser(newUser: User | undefined) {
+    this.currentUser = newUser;
+  }
+
+  setCurrentUserEinkaeufe(newEinkaeufe : Produkt[]| undefined){
+    if(newEinkaeufe != undefined){
+    // @ts-ignore
+      this.currentUser.eigeneKaeufe = newEinkaeufe;
+    }
+  }
+
+  setCurrentUserWarenkorb(Warenkorb : Produkt[]){
+    if(Warenkorb != undefined) {
+      // @ts-ignore
+      this.currentUser.warenkorb = Warenkorb;
+    }
+
+  }
+
+  addCurrentuserComment(newuserbewertung:userbewertung){
+    this.currentUser?.eigeneBwertungen.push(newuserbewertung)
+  }
+
 
 }

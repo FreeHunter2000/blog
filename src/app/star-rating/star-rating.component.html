@@ -1,0 +1,6 @@
+<div class="star-rating">
+  <span *ngFor="let star of stars; let i = index" (click)="rate(i + 1)">
+    <ng-container *ngIf="rating >= i + 1; else emptyStar">&#9733;</ng-container>
+    <ng-template #emptyStar>&#9734;</ng-template>
+  </span>
+</div>
