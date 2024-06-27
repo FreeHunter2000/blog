@@ -13,6 +13,9 @@
   </div>
 </div>
 
+
+<div *ngFor="let product of uniqueProducts">
+  <p>naamE. {{ product.stringValue }} anzahl. {{ product.number}}</p>
 </div>
 
 
@@ -20,7 +23,7 @@
 <button (click)="toggleKaufAnsicht()" >Kaufen </button>
 </div>
 
-
+</div>
 
   <div class ="KaufAnsicht">
   <app-kauf-ansicht *ngIf="showKaufAnsicht" [produktlist] = WarenkorbList></app-kauf-ansicht>
