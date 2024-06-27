@@ -1,29 +1,20 @@
 
-<div class="warenkorb">
+<div class="warenkorb" [hidden]="showKaufAnsicht">
   <div class="produkt-container">
     <app-produkt *ngFor="let produkt of WarenkorbList" [produkt]="produkt" class="produkt-item"></app-produkt>
   </div>
-<div class="Warekorb" [hidden]="showKaufAnsicht">
-<div>
-  <app-produkt *ngFor="let produkt of WarenkorbList" [produkt]="produkt">
-  </app-produkt>
+
 
   <div class ="clearbutton">
     <button (click)="clearWarenkorbList()">Liste Löschen</button>
   </div>
-</div>
 
 
-<div *ngFor="let product of uniqueProducts">
-  <p>naamE. {{ product.stringValue }} anzahl. {{ product.number}}</p>
-</div>
-
-
-<div>
+<div class ="kaufButton">
 <button (click)="toggleKaufAnsicht()" >Kaufen </button>
 </div>
 
-</div>
+
 
   <div class ="KaufAnsicht">
   <app-kauf-ansicht *ngIf="showKaufAnsicht" [produktlist] = WarenkorbList></app-kauf-ansicht>
