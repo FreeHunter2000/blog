@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges } from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, Output} from '@angular/core';
 import {Produkt} from "../produkt/produkt.model";
 import {WarenkorbComponent} from "../warenkorb/warenkorb.component";
 import {UserService} from "../user/user.service";
@@ -14,6 +14,8 @@ import {UserService} from "../user/user.service";
 export class KaufAnsichtComponent {
 
   userservice:UserService;
+
+  @Output() listeloeschen = new EventEmitter<boolean>()
 
   constructor(private warenkorbComp: WarenkorbComponent , Userservice : UserService) {
     this.userservice =Userservice;
@@ -41,8 +43,10 @@ for(let Produkt of this.produktlist){
 }
   closeComponent() {
     this.warenkorbComp.showKaufAnsicht = false;
-
+    this.warenkorbComp.WarenkorbList=[];
     this.userservice.setCurrentUserEinkaeufe(this.produktlist);
+
+    this.listeloeschen.emit(true);
 
   }
 

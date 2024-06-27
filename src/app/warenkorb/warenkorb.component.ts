@@ -22,6 +22,8 @@ export class WarenkorbComponent {
 
   uniqueProducts!: any[];
 
+  listeloeschen:boolean=false;
+
 
   showKaufAnsicht = false;
 
@@ -62,6 +64,11 @@ this.warenkornservice.clearWarenkorb()
 
   toggleKaufAnsicht() {
     this.showKaufAnsicht = !this.showKaufAnsicht;
+  }
+
+  listeloeschenbool(listloeschen:boolean){
+    this.warenkornservice.clearWarenkorb()
+    this.WarenkorbList = this.warenkornservice.getWarenkorb()
   }
 
 }
