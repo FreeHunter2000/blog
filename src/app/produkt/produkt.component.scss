@@ -3,14 +3,14 @@
   flex-wrap: wrap; // Umbruch auf neue Zeile
   gap: 10px;
   flex-direction: row;
-
+  font-size: 18px
 }
 
 .Produkt {
   margin-top: 10px;
-  border: 1px solid #04080c;
+ // border: 1px solid #04080c;
   padding: 20px;
-  background-color: #ffffff;
+  background-color: #f6f5f5;
   display: flex;
   flex-direction: column;
   flex: 1; //gleichmaeßíg verteilen
@@ -65,25 +65,4 @@
   justify-content: center;
 
 }
-.Button {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
 
-}
-
-.Button button {
-  padding: 15px 30px;
-  font-size: 16px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;//sanfter Übergang
-
-}
-
-.Button button:hover {
-  background-color: #2cdcdc;
-  color: white;
-}

@@ -37,6 +37,7 @@ input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
 .btn {
   background-color: #4CAF50;
   color: #04080c;
+  font-weight: bold;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
@@ -44,6 +45,7 @@ input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
   width: 100%;
   opacity: 0.9;
   border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .btn:hover {
   opacity:1;

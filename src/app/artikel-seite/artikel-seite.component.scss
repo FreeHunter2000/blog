@@ -53,6 +53,7 @@ app-produkt {
 .Button {
   display: flex;
   gap: 5px; //zwischen
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .warenkorbButton button,
@@ -63,6 +64,8 @@ app-produkt {
   border-radius: 5px;
   font-size: 14px;
   transition: background-color 0.3s ease, color 0.3s ease;
+  color: #04080c;
+  font-weight: bold;
 }
 
 .warenkorbButton button {
