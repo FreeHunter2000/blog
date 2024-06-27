@@ -1,8 +1,8 @@
 
 <nav class="navbar">
   <a *ngIf="userService.currentUser?.userType === this.UserType.Admin" routerLink="/admin" class="navbar__item">Admin-Seite</a>
-  <a routerLink="/" routerLinkActive="active" class="navbar__item">New in`s</a>
-  <a routerLink="/article" routerLinkActive="active" class="navbar__item">unsere Produkte</a>
+  <a routerLink="/" routerLinkActive="active" class="navbar__item">Startseite</a>
+  <a routerLink="/article" routerLinkActive="active" class="navbar__item">Produkte</a>
   <a routerLink="/warenkorb" routerLinkActive="active" class="navbar__item">Warenkorb</a>
 
   <a routerLink="/login" routerLinkActive="active" class="navbar__item">Login</a>
@@ -11,7 +11,13 @@
   </div>
 
 </nav>
-
 <router-outlet></router-outlet>
+<body><body>
+<div class="container">
+  <h1>Willkommen</h1>
+  <img src="https://www.easyclean-shop.de/ratgeber/wp-content/uploads/2023/08/Banner-Blog-Kleiderschrank.jpg" alt="Beschreibung des Bildes">
+</div>
+</body>
+
 
 
