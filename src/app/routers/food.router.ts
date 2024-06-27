@@ -21,8 +21,8 @@ router.get("/seed", asyncHandler(
 
 router.post("/login", asyncHandler(
   async (req, res) => {
-    const {email, password} = req.body;
-    const user = await FoodModel.findOne({email , password});
+    const {name} = req.body;
+    const user = await FoodModel.findOne({name});
 
     if(user) {
       res.send(generateTokenReponse(user));
