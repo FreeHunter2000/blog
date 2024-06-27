@@ -14,10 +14,10 @@
 <button (click)="toggleKaufAnsicht()" >Kaufen </button>
 </div>
 
-
+</div>
 
   <div class ="KaufAnsicht">
-  <app-kauf-ansicht *ngIf="showKaufAnsicht" [produktlist] = WarenkorbList></app-kauf-ansicht>
+  <app-kauf-ansicht *ngIf="showKaufAnsicht" [produktlist] = WarenkorbList  (listeloeschen)="listeloeschenbool($event)"></app-kauf-ansicht>
   </div>
 
 
@@ -30,4 +30,4 @@
   </div>
 </div>
 
-</div>
+
