@@ -14,6 +14,7 @@ router.get("/seed", asyncHandler(
 
     await FoodModel.create(sample_foods);
     res.send("Seed Is Done!");
+    console.log("Seed send");
   }
 ))
 
