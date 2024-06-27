@@ -44,8 +44,12 @@ const generateTokenReponse = (food : Food) => {
 
   return {
 
+    id: food.id,
     name: food.name,
-    price: food.price
+    description: food.description,
+    price: food.price,
+    imageUrl: food.imageUrl,
+    ratings: food.ratings,
 
   };
 }
