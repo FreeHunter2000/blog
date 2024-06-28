@@ -12,17 +12,22 @@
   padding: 20px;
   background-image:url("https://www.varta-guide.de/wp-content/uploads/pixxio/home/Office_Varta_2/Golden-autumn-scene-in-a-park-with-falling-leaves-the-sun-shining-through-the-trees-and-blue-sky.-Colorful-foliage-in-the-park-falling-leaves-natural-background.jpg");
   //background-size: cover;
+
 }
 
 header {
   width: 100%;
-  background-color: #249acc;
+  background-color: #f4ac3d;
   color: #04080c;
   padding: 10px 0;
   text-align: center;
   border: 1px solid #04080c;
 }
-
+header img {
+  width: 300px;  /* Breite des Logos */
+  height: 100px;  /* Höhe des Logos automatisch anpassen */
+  object-fit: cover;
+}
 header h1 {
   margin: 0;
   font-size: 24px;
@@ -42,7 +47,7 @@ main {
 footer {
   width: 100%;
   padding: 10px 0;
-  background-color: #249acc;
+  background-color: #f4ac3d;
   color: #04080c;
   text-align: center;
 }

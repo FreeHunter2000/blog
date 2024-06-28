@@ -1,5 +1,6 @@
 <div class ="ProduktSite">
 <div *ngFor="let produkt of Produktlist">
+  <div class="produktBox">
   <div #myDiv mygottenprodukt="produkt" >
   </div>
   <app-produkt (onWarenkorbAdd)=handleDataEvent($event)  [produkt]="produkt" >
@@ -13,7 +14,7 @@
       </div>
     </div>
 </div>
-
+</div>
 
 </div>
 
