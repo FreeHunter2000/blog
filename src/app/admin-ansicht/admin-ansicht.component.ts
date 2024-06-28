@@ -61,28 +61,25 @@ export class AdminAnsichtComponent {
 
 
 
-
-
   async createNewUser() {
+    const addUser = async (userData: User) => {
+      const user = new UserModel(userData);
+      await user.save();
+    };
 
-
-
-      const newUser = new UserModel({
-        username: 'testuser',
-        email: 'test@example.com',
-        password: 'password123'
-      });
-
-      try {
-        const savedUser = await newUser.$__save();
-        console.log('User saved:', savedUser);
-      } catch (error) {
-        console.error('Error saving user:', error);
-      }
-
-
-
+    await addUser({
+      email: 'john@cxycxyc.com',
+      name: 'Docxycxye',
+      vorname: 'Johcxycxyn',
+      eigeneBwertungen: [],
+      eigeneKaeufe: [],
+      isAdmin: true,
+      password: '12345',
+      loggedIn: true,
+      warenkorb: []
+    });
   }
+
 
   createProdukt(){
     if(this.newPrImagePath ===""){

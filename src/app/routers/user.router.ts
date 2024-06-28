@@ -9,7 +9,7 @@ const router = Router();
 router.get("/seed", asyncHandler(
   async (req, res) => {
     const usersCount = await UserModel.countDocuments();
-    if(usersCount> 0){
+    if (usersCount > 0) {
       res.send("Seed is already done!");
       return;
     }
@@ -37,9 +37,10 @@ const generateTokenReponse = (user : User) => {
     eigeneKaeufe: user.eigeneKaeufe,
    active: user,
     warenkorb: user.warenkorb,
-    password: user.password,
+    password: user.password
 
-  };
+
+    }
 }
 
 

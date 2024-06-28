@@ -25,7 +25,7 @@ import { AdminAnsichtComponent } from './admin-ansicht/admin-ansicht.component';
 import { KaufAnsichtComponent } from './kauf-ansicht/kauf-ansicht.component';
 import { UserbewertungComponent } from './userbewertung/userbewertung.component';
 import { StarRatingComponent } from './star-rating/star-rating.component';
-
+import { CanvasJSAngularChartsModule} from "@canvasjs/angular-charts";
 
 @NgModule({
   declarations: [
@@ -48,13 +48,15 @@ import { StarRatingComponent } from './star-rating/star-rating.component';
 
 
 
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ToastrModule.forRoot(),
-    MatButtonModule
+    MatButtonModule,
+    CanvasJSAngularChartsModule
 
   ],
   providers: [UserService,AuthService],
