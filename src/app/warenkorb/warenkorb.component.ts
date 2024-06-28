@@ -1,6 +1,5 @@
 import {Component, OnChanges, SimpleChange, OnInit} from '@angular/core';
 import {Produkt} from "../produkt/produkt.model";
-import {User, UserType} from "../user/testUser";
 import {userbewertung} from "./userBewertung.model";
 import {warenKorbservice} from "./warenkorb.service";
 import {UniqueProductsPipe} from "../unique-products.pipe";
@@ -17,7 +16,7 @@ import {UserbewertungService} from "../userbewertung/userbewertung-injectable";
 export class WarenkorbComponent {
   UserBewertung:userbewertung[] =[];
   Einkaeufe:Produkt[]=[];
-  WarenkorbUser : User = new User("NoMail","NoName","NoName",this.UserBewertung,this.Einkaeufe, UserType.Kunde,"NoPassword",false);
+
   WarenkorbList: Produkt[]= this.warenkornservice.getWarenkorb();
 
   uniqueProducts!: any[];

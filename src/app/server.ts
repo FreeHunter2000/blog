@@ -4,7 +4,7 @@ dotenv.config();
 
 import express from "express";
 import cors from "cors";
-import { sample_foods, sample_tags, sample_users } from "./routers/data";
+import { sample_foods, sample_users } from "./routers/data";
 
 import foodRouter from './routers/food.router';
 import userRouter from './routers/user.router';
@@ -31,9 +31,7 @@ app.get("/api/foods/search/:searchTerm", (req, res) => {
   res.send(foods);
 })
 
-app.get("/api/foods/tags", (req, res) => {
-  res.send(sample_tags);
-})
+
 
 app.get("/api/foods/tag/:tagName", (req, res) => {
   const tagName = req.params.tagName;

@@ -1,9 +1,14 @@
 import {Component} from '@angular/core';
 import {Produkt} from "../produkt/produkt.model";
-import {User, UserType} from "../user/testUser";
+
 import {ProduktInjectableService} from "../produkt-injectable.service";
 import {UserService} from "../user/user.service";
 import {userbewertung} from "../warenkorb/userBewertung.model";
+import {User, UserModel, UserSchema} from "../models/user.models";
+import mongoose from "mongoose";
+
+
+
 
 @Component({
   selector: 'app-admin-ansicht',
@@ -12,12 +17,14 @@ import {userbewertung} from "../warenkorb/userBewertung.model";
 })
 export class AdminAnsichtComponent {
 
+
+
   showUserlist:boolean = false;
   showProduktlist:boolean = false;
 
   Produktlist:Produkt[]=[];
   Userlist:User[]=[];
-  newUsertype:UserType = UserType.NoUser;
+  isAdmin: boolean=true;
 
   newName:string ="";
   newVorname:string="";
@@ -44,7 +51,6 @@ export class AdminAnsichtComponent {
 
 
 
-
   constructor(produktservice: ProduktInjectableService, userservice: UserService) {
     this.Produktlist = produktservice.getProdukt();
     this.Userlist = userservice.getAllUser();
@@ -53,24 +59,29 @@ export class AdminAnsichtComponent {
     this.produktservice = produktservice;
   }
 
-  onCheckboxcheck(usertype : UserType){
-    if(this.newUsertype === usertype){
-      this.newUsertype = UserType.NoUser;
-    }
-    else{
-      this.newUsertype = usertype;
-    }
 
-  }
 
-  createNewUser(){
-   let newUser = new User(this.newEmail,this.newName,this.newVorname,this.newEigenebewertung,this.newEinkaeufe,this.newUsertype,this.newPassword,true)
-   this.userservice.addUser(newUser) ;
 
-    this.newName ="";
-    this.newVorname="";
-    this.newEmail="";
-    this.newPassword="";
+
+  async createNewUser() {
+
+
+
+      const newUser = new UserModel({
+        username: 'testuser',
+        email: 'test@example.com',
+        password: 'password123'
+      });
+
+      try {
+        const savedUser = await newUser.$__save();
+        console.log('User saved:', savedUser);
+      } catch (error) {
+        console.error('Error saving user:', error);
+      }
+
+
+
   }
 
   createProdukt(){
@@ -90,5 +101,5 @@ export class AdminAnsichtComponent {
   }
 
 
-  protected readonly UserType = UserType;
+
 }

@@ -13,7 +13,7 @@ export class AdminGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     const currentUser = this.userService.currentUser;
-    if (currentUser && currentUser.userType === 'Admin') {
+    if (currentUser && currentUser.isAdmin) {
       return true;
     } else {
       // Leite nicht-Admin-Benutzer auf eine andere Seite um

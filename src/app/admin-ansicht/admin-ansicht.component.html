@@ -7,7 +7,7 @@
     <p>Vorname:{{user.name}}</p>
     <p>Email:{{user.email}}</p>
     <p>Password:{{user.password}}</p>
-    <p>UserType:{{user.userType}}</p>
+
   </div>
 </div>
 
@@ -35,16 +35,7 @@
 <div class="UserCheckbox">
    Soll der User ein Kunde oder ein Admin werden?
     <div class ="checkboxKunde"> Kunde
-      <label>
-      <input type="checkbox" name="options" [checked]="newUsertype === UserType.Kunde" (change)="onCheckboxcheck(UserType.Kunde)" value="Hier Namen eingeben" >
-      </label>
 
-
-      <div class ="checkboxAdmin">
-        <label>Admin
-        <input type="checkbox" name="options" [checked]="newUsertype === UserType.Admin" (change)="onCheckboxcheck(UserType.Admin)" value="Hier Namen eingeben" >
-        </label>
-      </div>
     </div>
 
   </div>

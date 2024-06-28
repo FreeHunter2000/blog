@@ -1,18 +1,19 @@
-import {Schema, model} from 'mongoose';
+import mongoose, {model} from 'mongoose';
 import {userbewertung} from "../warenkorb/userBewertung.model";
 import {Produkt} from "../produkt/produkt.model";
-import {UserType} from "../user/testUser";
 
+
+const Schema = mongoose.Schema;
 export interface User{
   email: string;
   name: string;
   vorname: string;
-  eigeneBwertungen: userbewertung[];
-  eigeneKaeufe: Produkt[];
+  eigeneBwertungen: [];
+  eigeneKaeufe: [];
   isAdmin: boolean;
   password: string;
   loggedIn: boolean;
-  warenkorb: Produkt[];
+  warenkorb: [];
 }
 
 export const UserSchema = new Schema<User>(
@@ -25,7 +26,7 @@ export const UserSchema = new Schema<User>(
   email: {type: String, required: true, unique: true},
   password: {type: String, required: true},
   isAdmin: {type: Boolean, required: true},
-  loggedIn: {type: Boolean, required: true},
+  loggedIn: {type: Boolean},
 }, {
   timestamps: true,
   toJSON:{
@@ -36,4 +37,7 @@ export const UserSchema = new Schema<User>(
   }
 });
 
+
+
 export const UserModel = model<User>('user', UserSchema);
+var userModel = mongoose.model('User', UserSchema);

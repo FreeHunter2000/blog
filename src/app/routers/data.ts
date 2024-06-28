@@ -3,7 +3,7 @@ import {Produkt} from "../produkt/produkt.model";
 
 export const sample_foods: any[] = [
   {
-    id: '0',
+
     name: 'TestName',
     description: 'This is just a Description',
     price: 1,
@@ -12,7 +12,7 @@ export const sample_foods: any[] = [
     // Weitere Eigenschaften hier einfügen, falls vorhanden
   },
   {
-    id: '1',
+
     name: 'Jacke',
     description: 'This is just a Description',
     price: 15,
@@ -21,7 +21,7 @@ export const sample_foods: any[] = [
     // Weitere Eigenschaften hier einfügen, falls vorhanden
   },
   {
-    id: '2',
+
     name: 'Hemd',
     description: 'This is just a Description',
     price: 20,
@@ -49,16 +49,8 @@ export const sample_foods: any[] = [
   },
 ];
 
-export const sample_tags: any[] = [
-  { name: 'All', count: 6 },
-  { name: 'FastFood', count: 4 },
-  { name: 'Pizza', count: 2 },
-  { name: 'Lunch', count: 3 },
-  { name: 'SlowFood', count: 2 },
-  { name: 'Hamburger', count: 1 },
-  { name: 'Fry', count: 1 },
-  { name: 'Soup', count: 1 },
-];
+
+
 
 export const sample_users: any[] = [
   {

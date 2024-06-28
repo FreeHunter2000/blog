@@ -1,7 +1,9 @@
 import {Injectable} from '@angular/core';
-import {User, UserType} from './testUser';
+import {User} from "../models/user.models";
 import {Produkt} from "../produkt/produkt.model";
 import {userbewertung} from "../warenkorb/userBewertung.model";
+import {UserModel} from "../models/user.models";
+
 
 
 @Injectable({
@@ -11,22 +13,22 @@ export class UserService {
   userbewertung:userbewertung[]=[];
   einkaufe:Produkt[]=[];
   users: User[] = [];
-  currentUser: User | undefined = new User("NoMail","NoName","NoName",this.userbewertung,this.einkaufe, UserType.NoUser,"NoPassword",false);
-
+  currentUser: User | undefined  = new UserModel();
   constructor() {this.users.push({
     email: 'benutzer1@example.com',
     name: 'Benutzer Eins',
     vorname: 'Eins',
     eigeneBwertungen: [],
     eigeneKaeufe: [],
-    userType: UserType.Admin,
+    isAdmin: true,
     password: 'password1',
     loggedIn: true,
     warenkorb:[]
   }) }
 
-  addUser(user: User) {
-    this.users.push(user);
+  async addUser(user: User) {
+    const newUser = new UserModel(user);
+    return await newUser.save();
   }
 
   removeUser(email: string) {
@@ -82,9 +84,7 @@ export class UserService {
 
   }
 
-  addCurrentuserComment(newuserbewertung:userbewertung){
-    this.currentUser?.eigeneBwertungen.push(newuserbewertung)
-  }
+
 
 
 }

@@ -31,12 +31,12 @@ const generateTokenReponse = (food : Food) => {
 
   return {
 
-    id: food.id,
+
     name: food.name,
     description: food.description,
     price: food.price,
     imageUrl: food.imageUrl,
-    ratings: food.ratings,
+    ratings: food.ratings
 
   };
 }

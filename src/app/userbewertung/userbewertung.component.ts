@@ -27,7 +27,7 @@ export class UserbewertungComponent {
       this.newUserbewertung.kommentar,
       this.newUserbewertung.bewertung)
     newBewertung.setproduktName(this.produktname)
-    this.userservice.addCurrentuserComment(newBewertung);
+
     this.UserbewertungsListe.push(newBewertung);
 
 

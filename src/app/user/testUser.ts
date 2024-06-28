@@ -1,4 +1,4 @@
-import {userbewertung} from "../warenkorb/userBewertung.model";
+/*import {userbewertung} from "../warenkorb/userBewertung.model";
 import {Produkt} from "../produkt/produkt.model";
 
 
@@ -38,3 +38,4 @@ export class User {
 
 }
 
+*/

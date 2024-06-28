@@ -2,7 +2,7 @@ import {Component, EventEmitter, Output} from "@angular/core";
 import {UserService} from "../user.service";
 
 
-import {User, UserType} from "../testUser";
+import {User, UserModel} from "../../models/user.models";
 import {AuthService} from "../auth.service";
 
 @Component({
@@ -19,25 +19,36 @@ export class RegisterComponent {
 
   constructor(protected userService: UserService, private authService: AuthService) { }
 
-  registerUser() {
+  async registerUser() {
+    const newUser = new UserModel({
+      email: this.email,
+      name: this.name,
+      vorname: this.vorname,
+      eigenekaeufe: [],
+      eigenebewaertungen: [],
+      isAdmin: false,
+      password: this.password,
+      loggedin: true,
+      warenkorb: []
+    });
 
-      const user: User = {
-        userType: UserType.Kunde,
-        eigeneBwertungen: [],
-        eigeneKaeufe: [],
-        loggedIn: true,
-        email: this.email,
-        name: this.name,
-        vorname: this.vorname,
-        password: this.password,
-        warenkorb:[]
-      };
-        this.userService.addUser(user)
-      // Hier würden Sie den Benutzer in Ihrer Datenbank speichern
-      console.log(user);
-    };
+    try {
+      // Speichern Sie den Benutzer in der Datenbank
+      const result = await newUser.save();
+      console.log('User saved:', result);
+    } catch (error) {
+      console.error('Error saving user:', error);
+    }
 
+
+    this.name = "";
+    this.vorname = "";
+    this.email = "";
+    this.password = "";
   }
+    }
+
+
 
 
 

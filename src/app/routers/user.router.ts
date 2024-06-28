@@ -35,10 +35,10 @@ const generateTokenReponse = (user : User) => {
     vorname: user.vorname,
     eigeneBwertungen: user.eigeneBwertungen,
     eigeneKaeufe: user.eigeneKaeufe,
-    loggedIn: user.loggedIn,
+   active: user,
     warenkorb: user.warenkorb,
     password: user.password,
-    token: token
+
   };
 }
 

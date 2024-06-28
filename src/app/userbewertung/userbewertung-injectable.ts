@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {User,UserType} from "../user/testUser";
+
 import {Produkt} from "../produkt/produkt.model";
 import {userbewertung} from "../warenkorb/userBewertung.model";
 import {UserService} from "../user/user.service";
