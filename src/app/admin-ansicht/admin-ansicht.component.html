@@ -7,6 +7,12 @@
     <p>Vorname:{{user.name}}</p>
     <p>Email:{{user.email}}</p>
     <p>Password:{{user.password}}</p>
+    <div *ngIf="user.isAdmin===true ; else elseBlock">
+      UserTyp: Admin
+    </div>
+    <ng-template #elseBlock>
+      <p>UserTyp: User</p>
+    </ng-template>
 
   </div>
 </div>
@@ -32,13 +38,14 @@
     </div>
 
 
-<div class="UserCheckbox">
-   Soll der User ein Kunde oder ein Admin werden?
-    <div class ="checkboxKunde"> Kunde
-
+    <div class="UserCheckbox">
+      Soll der User ein Kunde oder ein Admin werden?
+      <div class ="checkboxKunde"> Admin
+        <label>
+          <input type="checkbox" (change)=" toggleCheckbox()" />
+        </label>
+      </div>
     </div>
-
-  </div>
 
     <div class="createUserButton">
       <button (click)="createNewUser()" >create User</button>

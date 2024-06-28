@@ -27,8 +27,9 @@ export class UserService {
   }) }
 
   async addUser(user: User) {
-    const newUser = new UserModel(user);
-    return await newUser.save();
+ this.users.push(user);
+
+
   }
 
   removeUser(email: string) {

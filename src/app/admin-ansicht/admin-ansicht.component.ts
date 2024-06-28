@@ -24,7 +24,7 @@ export class AdminAnsichtComponent {
 
   Produktlist:Produkt[]=[];
   Userlist:User[]=[];
-  isAdmin: boolean=true;
+  isAdmin:boolean=false;
 
   newName:string ="";
   newVorname:string="";
@@ -57,29 +57,36 @@ export class AdminAnsichtComponent {
 
     this.userservice = userservice;
     this.produktservice = produktservice;
+
+    this.isAdmin=false;
+  }
+
+  toggleCheckbox() {
+    this.isAdmin = !this.isAdmin;
   }
 
 
+   createNewUser() {
+     let newUser = new UserModel({
+       email: this.newEmail,
+       name: this.newName,
+       vorname: this.newVorname,
+       eigeneBwertungen: [],
+       eigeneKaeufe: [],
+       isAdmin: this.isAdmin,
+       password: this.newPassword,
+       loggedIn: true,
+       warenkorb: []
+     })
 
-  async createNewUser() {
-    const addUser = async (userData: User) => {
-      const user = new UserModel(userData);
-      await user.save();
-    };
+     this.userservice.addUser(newUser);
 
-    await addUser({
-      email: 'john@cxycxyc.com',
-      name: 'Docxycxye',
-      vorname: 'Johcxycxyn',
-      eigeneBwertungen: [],
-      eigeneKaeufe: [],
-      isAdmin: true,
-      password: '12345',
-      loggedIn: true,
-      warenkorb: []
-    });
+      this.newEmail=""
+      this.newName=""
+      this.newVorname=""
+      this.newPassword=""
+
   }
-
 
   createProdukt(){
     if(this.newPrImagePath ===""){
