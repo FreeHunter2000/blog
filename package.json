@@ -1,12 +1,12 @@
 {
   "name": "blog",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/app/server.js",
+  "type": "commonjs",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "start": "node dist/app/server.js",
+    "build": "tsc"
   },
   "private": true,
   "dependencies": {
@@ -30,7 +30,7 @@
     "mongodb": "^6.7.0",
     "mongoose": "^8.4.4",
     "ngx-toastr": "^18.0.0",
-    "rxdb": "^15.24.0",
+    "rxdb": "^15.26.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
@@ -49,6 +49,6 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "ts-node": "^10.9.2",
-    "typescript": "~5.2.2"
+    "typescript": "^5.5.3"
   }
 }

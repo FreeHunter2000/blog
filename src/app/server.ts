@@ -2,8 +2,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 
-import express from "express";
-import cors from "cors";
+import express from 'express';
+import cors from 'cors';
 import { sample_foods, sample_users } from "./routers/data";
 
 import foodRouter from './routers/food.router';
@@ -13,23 +13,21 @@ import jwt from "jsonwebtoken";
 dbConnect();
 
 const app = express();
-app.use(express.json());
-app.use(cors({
-  credentials:true,
-  origin:["http://localhost:4200"]
-}));
+const port = 5000;
 
-app.get("/api/foods", (req, res) => {
-  res.send(sample_foods);
-})
+dbConnect().then(() => {
+  console.log('Database connected successfully');
+}).catch((error) => {
+  console.error('Database connection failed:', error);
+});
 
-app.get("/api/foods/search/:searchTerm", (req, res) => {
-  const searchTerm  = req.params.searchTerm;
-  const foods = sample_foods
-    .filter(food => food.name.toLowerCase()
-      .includes(searchTerm.toLowerCase()));
-  res.send(foods);
-})
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}/`);
+});
 
 
 
@@ -74,7 +72,6 @@ const generateTokenReponse = (user : any) => {
 app.use("/api/foods", foodRouter);
 app.use("/api/users", userRouter);
 
-const port = 5000;
 app.listen(port, () => {
   console.log("Website served on http://localhost:" + port);
 })

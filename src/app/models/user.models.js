@@ -1,0 +1,25 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserModel = exports.UserSchema = void 0;
+var mongoose_1 = require("mongoose");
+var Schema = mongoose_1.default.Schema;
+exports.UserSchema = new Schema({
+    name: { type: String, required: true },
+    vorname: { type: String, required: true },
+    eigeneBwertungen: { type: [], required: false },
+    eigeneKaeufe: { type: [], required: false },
+    warenkorb: { type: [], required: true },
+    email: { type: String, required: true, unique: true },
+    password: { type: String, required: true },
+    isAdmin: { type: Boolean, required: true },
+    loggedIn: { type: Boolean },
+}, {
+    timestamps: true,
+    toJSON: {
+        virtuals: true
+    },
+    toObject: {
+        virtuals: true
+    }
+});
+exports.UserModel = (0, mongoose_1.model)('user', exports.UserSchema);
